@@ -1,0 +1,254 @@
+header .header-top-menu {
+    max-width: 650px;
+    margin-left: auto;
+}
+
+header .header-top-menu li {
+    flex-grow: 1;
+}
+
+header .header-top-menu li a {
+    color: #ffffff;
+    font-size: 36px;
+    font-family: "Bebas Neue", cursive;
+    padding: 15px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+header .header-top-menu li a:hover {
+    background-color: #fd0001;
+}
+
+header .header-bottom {
+    padding: 10px 0;
+}
+
+header .logo {
+    position: absolute;
+    top: -50px;
+}
+
+header+main {
+    margin-top: 118px;
+}
+
+#HomeBanner .carousel-item .content {
+    top: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#HomeBanner .carousel-item .content p {
+    max-width: 400px;
+}
+
+#HomeBanner .banner-img {
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#HomeBanner .overlay {
+    background-color: rgba(21, 78, 157, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#CommonBanner {
+    background-color: #2f5596;
+    background-size: cover;
+}
+
+.banner-blog {
+    background: url(../images/blog-banner.png) no-repeat center;
+}
+
+.banner-events {
+    background: url(../images/events-banner.png) no-repeat center;
+}
+
+.banner-player {
+    background: url(../images/players-bannere.png) no-repeat center;
+}
+
+.banner-leaderboard {
+    background: url(../images/leaderboard-banner.png) no-repeat center;
+}
+
+#CommonBanner .content {
+    padding: 100px 0;
+}
+
+#CommonBanner .content p {
+    max-width: 425px;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.EventSection .event .event-tag {
+    top: 10px;
+    left: 10px;
+    padding: 2px 20px;
+    z-index: 2;
+}
+
+.EventSection .event {
+    margin-bottom: 30px;
+}
+
+.EventSection .event .event-date {
+    bottom: 15px;
+    right: 10px;
+    padding: 2px 20px;
+    z-index: 2;
+}
+
+.EventSection .event .inner .content {
+    padding: 40px 15%;
+    background: url(../images/event-bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.EventSection .upcoming-events .upcoming-event {
+    padding: 30px 10px;
+}
+
+.video-box {
+    position: relative;
+}
+
+.video-box .overlay {
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .video-box:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+} */
+.video-box video {
+    display: none;
+    height: 500px;
+}
+
+.video-box .video-thumbnail img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.atheleteDataSection {
+    background: url(../images/bg-2.png) no-repeat center;
+    background-size: cover;
+}
+
+.atheleteDataSection .tilted-tag {
+    height: 7px;
+    width: 16px;
+}
+
+.players-list-table .player .player-img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.playerVideos .video-list .player-video-box .overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ====================== media queries ==================== */
+@media (max-width: 1199px) {
+    header .header-top-menu li a {
+        font-size: 25px;
+    }
+
+    header .header-top-menu li {
+        flex-grow: inherit;
+    }
+}
+
+@media (max-width: 991px) {
+    header .header-top-menu li a {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    header .logo {
+        max-width: 300px;
+        top: -40px;
+    }
+
+    header+main {
+        margin-top: 90px;
+    }
+
+    #HomeBanner .banner-img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    header .logo {
+        max-width: 200px;
+        top: -5px;
+    }
+
+    header .header-bottom {
+        padding: 5px 0;
+    }
+
+    header+main {
+        margin-top: 75px;
+    }
+
+    header .header-top-menu li a {
+        font-size: 15px;
+        padding: 5px 15px;
+    }
+
+    .video-box .video-thumbnail img {
+        height: 300px;
+    }
+
+    .video-box video {
+        height: 300px;
+    }
+}
+
+@media (max-width: 479px) {
+    header .logo {
+        max-width: 150px;
+        top: -5px;
+    }
+}
+
+
+.line-clamp {
+    display: -webkit-box;
+    max-width: 200px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #fd0001;
+    color: #ffffff;
+}
+
+.collapsed:after {
+    content: "\f106";
+}
