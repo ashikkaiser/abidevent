@@ -152,8 +152,32 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row mb-3  align-items-center">
+                                    <label class="form-label col-sm-3" for="stripe_pk">Stripe Publishable Key</label>
+                                    <div class="col-sm-9">
+                                        <div class="input-group input-group-merge m-2">
+                                            <span id="stripe_pk" class="input-group-text"><i
+                                                    class='bx bxl-stripe'></i></span>
+                                            <input type="text" id="stripe_pk" name="stripe_pk"
+                                                value="{{ $st->stripe_pk }}" class="form-control"
+                                                aria-describedby="stripe_pk">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3  align-items-center">
+                                    <label class="form-label col-sm-3" for="stripe_sk">Stripe Secret Key</label>
+                                    <div class="col-sm-9">
+                                        <div class="input-group input-group-merge m-2">
+                                            <span id="stripe_sk" class="input-group-text"><i
+                                                    class='bx bxl-stripe'></i></i></span>
+                                            <input type="text" id="stripe_sk" name="stripe_sk"
+                                                value="{{ $st->stripe_sk }}" class="form-control"
+                                                aria-describedby="stripe_sk">
+                                        </div>
+                                    </div>
+                                </div>
 
-                                <button type="submit" class="btn btn-primary">Send</button>
+                                <button type="submit" class="btn btn-primary">Save</button>
                             </form>
                         </div>
                     </div>

@@ -26,6 +26,8 @@ $(document).ready(function () {
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
+    prevArrow: " ",
+    nextArrow: " ",
     responsive: [
       {
         breakpoint: 1024,
@@ -56,13 +58,13 @@ $(document).ready(function () {
     ]
   });
 
-// play video  === 
-$(".video-box .play-btn").click(function(){
-  $(this).parents(".video-box").find("video").show().trigger('play');
-  // $(this).parents(".video-box").find("video").play();
-  $(this).parents(".video-box").find(".overlay").hide();
-  $(this).parents(".video-box").find(".video-thumbnail").hide();
-})
+  // play video  === 
+  $(".video-box .play-btn").click(function () {
+    $(this).parents(".video-box").find("video").show().trigger('play');
+    // $(this).parents(".video-box").find("video").play();
+    $(this).parents(".video-box").find(".overlay").hide();
+    $(this).parents(".video-box").find(".video-thumbnail").hide();
+  })
 
 
 

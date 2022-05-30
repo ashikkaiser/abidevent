@@ -29,7 +29,7 @@
                             <div class="col-md-2">
                                 <label class="form-label" for="date"></label>
                                 <div class="form-check mt-3">
-                                    <label class="form-check-label" for="defaultCheck1"> Fetured News </label>
+                                    <label class="form-check-label" for="defaultCheck1"> Featured News </label>
                                     <input class="form-check-input" type="checkbox" value="1" id="is_featured"
                                         name="is_featured">
 
@@ -73,8 +73,7 @@
                                             <div id="snow-editor">
 
                                             </div>
-                                            <input type="hidden" id="detail" name="description"
-                                            value="">
+                                            <input type="hidden" id="detail" name="description" value="">
                                         </div>
                                     </div>
                                 </div>

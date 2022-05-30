@@ -132,6 +132,8 @@ class PagesController extends Controller
             $settings->social_link = json_encode($request->social);
             $settings->contact = json_encode($request->contact);
             $settings->powerdby = $request->powerdby;
+            $settings->stripe_pk = $request->stripe_pk;
+            $settings->stripe_sk = $request->stripe_sk;
             $settings->save();
             return redirect()->back();
         }

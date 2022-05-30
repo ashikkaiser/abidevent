@@ -66,7 +66,7 @@ class FrontendController extends Controller
         //     $data->push($row->id, (int)($row->statics->top_exit_velocity));
         //     return $data;
         // });
-        $top_exit_velocityx = Students::with('statics')->get()->map(function ($row) {
+        $top_exit_velocityx = Students::where('school_level', $id)->with('statics')->get()->map(function ($row) {
             $xdata = array();
             array_push($xdata, ['id' => $row->id, 'top_exit_velocity' => (int)($row->statics->top_exit_velocity), 'data' => $row, 'statics' => $row->statics]);
             $collection = collect($xdata);

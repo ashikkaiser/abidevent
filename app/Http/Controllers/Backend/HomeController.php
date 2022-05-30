@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $players = Students::take(10)->get();
+        $players = Students::paginate(10);
         return view('home', compact('players'));
     }
     // public function ho

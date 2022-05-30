@@ -57,6 +57,21 @@
                             </div>
                         </div>
 
+                        <div class="card-footer">
+                            <div class="col-md-12">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                                    <div class="div">
+                                        Showing {{ $players->firstItem() }} to {{ $players->lastItem() }} of
+                                        {{ $players->total() }} entries
+                                    </div>
+                                    <div class="mt-2">
+                                        {{ $players->render('pagination::admin') }}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 

@@ -147,7 +147,7 @@
     <script>
         $('.overlayLoader').hide()
         var stripe = Stripe(
-            "pk_test_51KMvQIBs1z3zp1acVM7teJLCHghGXFvUQP42vi3u9mgPSO2hiLZlZVAhedNqXT9TApa4ufqUdWKKn0M0F8cdUVal00UOwDMYXz"
+            "{{ st()->stipe_pk }}"
         );
 
         var elements = stripe.elements();

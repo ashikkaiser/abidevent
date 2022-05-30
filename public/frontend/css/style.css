@@ -252,3 +252,15 @@ header+main {
 .collapsed:after {
     content: "\f106";
 }
+.mobile-table{
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .mobile-table{
+        display: block;
+    }
+    .web-table{
+         display: none;
+    }
+}

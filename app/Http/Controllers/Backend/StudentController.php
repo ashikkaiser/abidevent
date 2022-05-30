@@ -17,7 +17,7 @@ class StudentController extends Controller
     public function index(Request $request)
     {
         // $students = Students::quary();
- $students = Students::query();
+        $students = Students::query();
         if ($request->has('filter')) {
             if ($request->desc) {
                 $students = Students::with(['statics' => function ($q) use ($request) {
@@ -26,7 +26,7 @@ class StudentController extends Controller
 
                 // $students->sortByDesc("statics.$request->desc");
             }
-           
+
             if ($request->state) {
                 $students->whereRaw('LOWER(`state`) LIKE ? ', [trim(strtolower($request->state)) . '%']);
             }

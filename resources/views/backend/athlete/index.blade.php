@@ -40,7 +40,7 @@
 
                                     </select>
                                 </div>
-                                <div class="col-md-3">
+                                {{-- <div class="col-md-3">
                                     <label class="form-label" for="desc">Filter High to Low
                                     </label>
                                     <select id="desc" name="desc" class="select2 form-select" data-allow-clear="true">
@@ -52,7 +52,7 @@
                                             {{ request()->desc ? (request()->desc == 'sprit_time' ? 'selected' : '') : '' }}>
                                             SPRINT TIME</option>
                                     </select>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-3">
                                     <label class="form-label" for="state">State</label>
                                     <input type="text" name="state" id="state" class="form-control" placeholder="state" />
@@ -82,8 +82,8 @@
                                     @elseif (request()->desc == 'sprit_time')
                                         <th>SPRINT TIME</th>
                                     @else
-                                        <th>Top Velocity</th>
-                                        <th>Top Velocity</th>
+                                        {{-- <th>Top Velocity</th>
+                                        <th>Top Velocity</th> --}}
                                     @endif
 
                                     <th>Actions</th>
@@ -118,8 +118,8 @@
                                         @elseif (request()->desc == 'sprit_time')
                                             <td>{{ $student->sprit_time }}</td>
                                         @else
-                                            <td>{{ $student->top_pitch_velocity }}</td>
-                                            <td>{{ $student->sprit_time }}</td>
+                                            {{-- <td>{{ $student->statics->top_pitch_velocity }}</td>
+                                            <td>{{ $student->statics->sprit_time }}</td> --}}
                                         @endif
 
                                         <td>
@@ -142,7 +142,24 @@
 
                             </tbody>
                         </table>
+
+
                     </div>
+                    <div class="card-header">
+                        <div class="col-md-12">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                                <div class="div">
+                                    Showing {{ $students->firstItem() }} to {{ $students->lastItem() }} of
+                                    {{ $students->total() }} entries
+                                </div>
+                                <div class="mt-2">
+                                    {{ $students->render('pagination::admin') }}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

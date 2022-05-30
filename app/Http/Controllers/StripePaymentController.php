@@ -12,7 +12,7 @@ class StripePaymentController extends Controller
 
     function stripePost(Request $request)
     {
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        Stripe\Stripe::setApiKey(st()->stipe_sk);
         try {
 
             $payment = json_encode(Stripe\Charge::create([
