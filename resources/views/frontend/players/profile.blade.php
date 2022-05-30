@@ -49,7 +49,18 @@
                                     </tr>
                                     <tr>
                                         <th>SCHOOL LEVEL:</th>
-                                        <td>{{ $player->school_level }}</td>
+                                        <td>
+                                            <?php if ($player->school_level == 1) {
+                                                echo 'High School ';
+                                            } elseif ($player->school_level == 2) {
+                                                echo '4 year college ';
+                                            } elseif ($player->school_level == 3) {
+                                                echo '2year/JUCO ';
+                                            } elseif ($player->school_level == 4) {
+                                                echo 'Free agent/Post School ';
+                                            } ?>
+
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th>SCHOOL NAME:</th>
