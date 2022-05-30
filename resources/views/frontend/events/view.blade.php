@@ -147,7 +147,7 @@
     <script>
         $('.overlayLoader').hide()
         var stripe = Stripe(
-            "{{ st()->stipe_pk }}"
+            "{{ st()->stripe_pk }}"
         );
 
         var elements = stripe.elements();
