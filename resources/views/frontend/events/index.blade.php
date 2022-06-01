@@ -13,8 +13,53 @@
     <section class="upcoming-event-section py-5">
         <div class="container">
             <h2 class="title title-2 text-secondary pb-3 mb-4">{{ $pageInfo->header }}</h2>
+            <div class="table-responsive mobile-table">
+                <table class="table players-list-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">SL</th>
+                            <th scope="col">Event</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="font-italic">
+                        @foreach ($events as $key => $item)
+                            <tr>
+                                <td scope="row" class="font-weight-bold text-secondary">{{ $key + 1 }}</td>
+                                <td scope="row" class="text-primary font-weight-bold">
+                                    <div class="player">
+                                        <a href="{{ route('home.viewEvent', $item->id) }}">
+                                            <p style="margin-bottom: 0px;white-space: nowrap;">Name : {{ $item->name }}
+                                            </p>
+                                            <p style="margin-bottom: 0px;white-space: nowrap;">State : {{ $item->state }}
+                                            </p>
+                                            <p style="margin-bottom: 0px;white-space: nowrap;">Location :
+                                                {{ $item->location }}</p>
+                                        </a>
 
-            <div class="table-responsive">
+
+                                        {{-- <p style="margin-bottom: 0px;white-space: nowrap;">Height: {{ $item->height }}</p>
+                                        <p style="margin-bottom: 0px;white-space: nowrap;">School:
+                                            {{ $item->school_name }}</p> --}}
+
+                                    </div>
+                                <td scope="row" class="text-center"><span
+                                        class="tilted-tag  bg-light-2  bg-secondary text-nowrap text-primary">
+                                        <span>{{ $item->date }}</span>
+                                    </span></td>
+
+                                </td>
+
+
+
+                            </tr>
+                        @endforeach
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive  web-table">
                 <table class="table upcoming-events-table">
                     <thead>
                         <tr>

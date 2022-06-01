@@ -7,11 +7,11 @@
 @section('content')
     <section id="HomeBanner" class="carousel slide" data-ride="carousel">
         <div>
-            <ol class="carousel-indicators">
+            {{-- <ol class="carousel-indicators">
                 <li data-target="#HomeBanner" data-slide-to="0" class="active"></li>
                 <li data-target="#HomeBanner" data-slide-to="1"></li>
                 <li data-target="#HomeBanner" data-slide-to="2"></li>
-            </ol>
+            </ol> --}}
             <div class="carousel-inner">
 
                 @foreach ($sliders as $slider)
@@ -238,15 +238,20 @@
 
             <!-- home video section -->
             <section class="featured-ads py-4">
-                <div class="container">
-                    <ul class="d-flex align-items-center justify-content-center featured-ads-list">
+                <div class="container ">
+                    {{-- <ul class="d-flex align-items-center justify-content-center featured-ads-list"> --}}
+                    <div class="row align-items-center justify-content-center featured-ads-list">
                         @foreach (json_decode($pageInfo->ads_data) as $item)
-                            <li class="p-2 p-sm-3"><a href="{{ $item->link }}" target="_blank">
-                                    <img src="/{{ $item->image }}" style="height: 250px;" alt="advertisement"></a>
-                            </li>
+                            <div class="col-md-4 mb-2">
+                                <a href="{{ $item->link }}" target="_blank">
+                                    <img src="/{{ $item->image }}" style="height: 250px;" alt="advertisement">
+                                </a>
+                            </div>
                         @endforeach
+                    </div>
 
-                    </ul>
+
+                    {{-- </ul> --}}
                 </div>
             </section>
         </div>
