@@ -29,11 +29,11 @@
                                 <td scope="row" class="text-primary font-weight-bold">
                                     <div class="player">
                                         <a href="{{ route('home.viewEvent', $item->id) }}">
-                                            <p style="margin-bottom: 0px;white-space: nowrap;">Name : {{ $item->name }}
+                                            <p style="margin-bottom: 0px">Name : {{ $item->name }}
                                             </p>
-                                            <p style="margin-bottom: 0px;white-space: nowrap;">State : {{ $item->state }}
+                                            <p style="margin-bottom: 0px">State : {{ $item->state }}
                                             </p>
-                                            <p style="margin-bottom: 0px;white-space: nowrap;">Location :
+                                            <p style="margin-bottom: 0px">Location :
                                                 {{ $item->location }}</p>
                                         </a>
 
