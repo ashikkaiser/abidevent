@@ -88,6 +88,15 @@
         }
 
     </style>
+
+    <style>
+        .mob-link {
+            color: black !important;
+            letter-spacing: 2px;
+            text-align: left !important;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -101,9 +110,54 @@
                     <div class="col-lg-8">
                         <ul
                             class="header-top-menu mb-0 w-100 d-flex justify-content-xl-between justify-content-end text-uppercase">
-                            <li><a href="{{ route('home.subscribe') }}">Subscribe</a></li>
-                            <li><a href="{{ route('home.recommendPlayer') }}">Recommend a Player</a></li>
-                            <li><a href="{{ route('home.blogs') }}">News</a></li>
+                            <li class="web-table"><a href="{{ route('home.subscribe') }}">Subscribe</a></li>
+                            <li class="web-table"><a href="{{ route('home.recommendPlayer') }}">Recommend a
+                                    Player</a></li>
+
+
+                            <li
+                                class="mobile-table nav-item  {{ Route::currentRouteName() == 'home.players' ? 'active' : '' }}">
+                                <a href="{{ route('home.players') }}" class="nav-link">Players</a>
+                            </li>
+                            <li class="mobile-table"><a href="{{ route('home.blogs') }}">News</a></li>
+                            <li
+                                class="mobile-table nav-item dropdown  {{ Route::currentRouteName() == 'home.event' ? 'active' : '' }}">
+                                <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Events
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item mob-link"
+                                        href="{{ route('home.event', 'indivudual') }}">INDIVUDUAL
+                                        EVENT</a>
+                                    <a class="dropdown-item mob-link"
+                                        href="{{ route('home.event', 'showcase') }}">SHOWCASE
+                                        EVENT
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li
+                                class="mobile-table  dropdown  {{ Route::currentRouteName() == 'home.leaderboard' ? 'active' : '' }}">
+                                <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Leader board
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 1) }}">High
+                                        School</a>
+                                    <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 2) }}">4
+                                        Year College</a>
+                                    <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 3) }}">2
+                                        Year/JUCO</a>
+                                    <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 4) }}">Free
+                                        Agent/Post
+                                        School</a>
+                                </div>
+                            </li>
+                            <li class="web-table"><a href="{{ route('home.blogs') }}">News</a></li>
                         </ul>
                     </div>
                 </div>
@@ -130,12 +184,17 @@
                                         <li class="nav-item"><a href="{{ route('home.index') }}"
                                                 class="nav-link {{ Route::currentRouteName() == 'home.index' ? 'active' : '' }}">Home</a>
                                         </li>
-                                        {{-- <li
-                                            class="nav-item  {{ Route::currentRouteName() == 'home.event' ? 'active' : '' }}">
-                                            <a href="{{ route('home.event') }}" class="nav-link">Events</a>
-                                        </li> --}}
+                                        <li class="mobile-table nav-item"><a
+                                                class="nav-link
+                                                href="
+                                                {{ route('home.subscribe') }}">Subscribe</a></li>
+                                        <li class="mobile-table nav-item"><a
+                                                class="nav-link
+                                                href="
+                                                {{ route('home.recommendPlayer') }}">Recommend a
+                                                Player</a></li>
                                         <li
-                                            class="nav-item dropdown  {{ Route::currentRouteName() == 'home.event' ? 'active' : '' }}">
+                                            class="web-table nav-item dropdown  {{ Route::currentRouteName() == 'home.event' ? 'active' : '' }}">
                                             <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                                 role="button" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false">
@@ -154,11 +213,11 @@
                                             </div>
                                         </li>
                                         <li
-                                            class="nav-item  {{ Route::currentRouteName() == 'home.players' ? 'active' : '' }}">
+                                            class="web-table nav-item  {{ Route::currentRouteName() == 'home.players' ? 'active' : '' }}">
                                             <a href="{{ route('home.players') }}" class="nav-link">Players</a>
                                         </li>
                                         <li
-                                            class="nav-item dropdown  {{ Route::currentRouteName() == 'home.leaderboard' ? 'active' : '' }}">
+                                            class="web-table nav-item dropdown  {{ Route::currentRouteName() == 'home.leaderboard' ? 'active' : '' }}">
                                             <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                                 role="button" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false">
