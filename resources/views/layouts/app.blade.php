@@ -169,7 +169,7 @@
                     <div class="col-lg-4">
                         <div class="logo">
                             <a href="/" class="d-inline-block"><img src="/frontend/images/logo.png" alt="Logo"
-                                    class="img-fluid" style="    max-width: 107%;"></a>
+                                    class="img-fluid" style="    max-width: 103%;"></a>
                         </div>
                     </div>
                     <div class="col-lg-8">
