@@ -30,7 +30,7 @@
                             <div class="col-md-5">
                                 <label class="form-label" for="date">Date</label>
                                 <input type="text" name="date" id="date" class="form-control dob-picker"
-                                    placeholder="YYYY-MM-DD" />
+                                    placeholder="YYYY-MM-DD HH:MM" />
                             </div>
                             <div class="col-md-5">
                                 <label class="form-label" for="state"> State</label>
@@ -166,8 +166,8 @@
     {{-- <script src="{{ asset('admin/assets/js/forms-pickers.js') }}"></script> --}}
     <script>
         $('.dob-picker').flatpickr({
-            enableTime: false,
-            dateFormat: 'Y-m-d '
+            enableTime: true,
+            // dateFormat: 'Y-m-d '
         });
     </script>
 @endsection

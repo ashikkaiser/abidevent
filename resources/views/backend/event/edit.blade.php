@@ -209,8 +209,7 @@
     {{-- <script src="{{ asset('admin/assets/js/forms-pickers.js') }}"></script> --}}
     <script>
         $('.dob-picker').flatpickr({
-            enableTime: false,
-            dateFormat: 'Y-m-d '
+            enableTime: true,
         });
     </script>
 @endsection

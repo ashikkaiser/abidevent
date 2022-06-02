@@ -18,4 +18,5 @@ class Events extends Model
         'location',
         'state'
     ];
+    protected $dates = ['date'];
 }

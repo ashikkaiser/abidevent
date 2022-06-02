@@ -37,15 +37,12 @@
                                                 {{ $item->location }}</p>
                                         </a>
 
-
-                                        {{-- <p style="margin-bottom: 0px;white-space: nowrap;">Height: {{ $item->height }}</p>
-                                        <p style="margin-bottom: 0px;white-space: nowrap;">School:
-                                            {{ $item->school_name }}</p> --}}
-
                                     </div>
                                 <td scope="row" class="text-center"><span
                                         class="tilted-tag  bg-light-2  bg-secondary text-nowrap text-primary">
-                                        <span>{{ $item->date }}</span>
+                                        <span>{{ $item->date->format('dS,F Y') }}</span>
+                                        <br />
+                                        <span>{{ $item->date->format('h:m A') }}</span>
                                     </span></td>
 
                                 </td>
@@ -78,7 +75,7 @@
                                 <td scope="row" class="text-primary font-weight-bold">{{ $item->state }}</td>
                                 <td scope="row" class="text-center"><span
                                         class="tilted-tag  bg-light-2  bg-secondary text-nowrap text-primary">
-                                        <span>{{ $item->date }}</span>
+                                        <span>{{ $item->date->format('dS,F Y h:m A') }}</span>
                                     </span></td>
                                 <td scope="row" class="font-weight-medium text-primary">{{ $item->location }}</td>
                             </tr>
