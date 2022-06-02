@@ -138,9 +138,9 @@
                                                 </span>
                                             </div>
                                             <div id="snow-editor">
-
+                                                {!! $page->content !!}
                                             </div>
-                                            <input type="hidden" id="detail" name="content" value="">
+                                            <input type="hidden" id="detail" name="content" value="{{ $page->content }}">
                                         </div>
                                     </div>
                                 </div>
