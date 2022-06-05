@@ -102,7 +102,7 @@
                             <th scope="col">Rank</th>
                             <th scope="col">Name of player</th>
                             <th scope="col">School Name</th>
-                            <th scope="col" class="text-center">Exit VELOCITY </th>
+                            <th scope="col" class="text-center">Top EXIT VELOCITY </th>
                         </tr>
                     </thead>
                     <tbody class="font-italic">
