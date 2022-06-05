@@ -78,7 +78,7 @@
                             <th scope="col">SL</th>
                             <th scope="col">Player</th>
                             <th scope="col">School</th>
-                            <th scope="col">School lavel</th>
+                            <th scope="col">School level</th>
                             <th scope="col">Age</th>
                             <th scope="col">Height</th>
                             <th scope="col">Stats</th>
