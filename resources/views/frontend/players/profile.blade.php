@@ -11,7 +11,7 @@
         <div class="content text-center text-white">
             <div class="container">
                 <h1 class="text-uppercase mb-3">Players</h1>
-                <p><em>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</em></p>
+                <p><em>Players Profiles</em></p>
             </div>
         </div>
     </section>
