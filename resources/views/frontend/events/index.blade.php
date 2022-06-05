@@ -42,7 +42,7 @@
                                         class="tilted-tag  bg-light-2  bg-secondary text-nowrap text-primary">
                                         <span>{{ $item->date->format('dS,F Y') }}</span>
                                         <br />
-                                        <span>{{ $item->date->format('h:m A') }}</span>
+                                        <span>{{ $item->date->format('h:i A') }}</span>
                                     </span></td>
 
                                 </td>
