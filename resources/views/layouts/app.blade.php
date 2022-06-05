@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Company Name">
-    <meta name="keywords" content="Company Name">
-    <meta name="author" content="Company Name">
+    <meta name="description" content="@yield('title')">
+    <meta name="keywords" content="@yield('title')">
+    <meta name="author" content="@yield('title')">
     <meta name="expires" content="never">
     <meta name="rating" content="general">
-    <meta name="copyright" content="Company Name">
+    <meta name="copyright" content="@yield('title')">
     <title>@yield('title')</title>
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -27,7 +27,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/manifest.json">
-    <meta property="og:title" content="Company Name" />
+    <meta property="og:title" content="@yield('title')" />
     <meta property="og:type" content="website" />
 
     <!-- Bootstrap core CSS -->
