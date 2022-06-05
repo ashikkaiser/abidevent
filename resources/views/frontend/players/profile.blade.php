@@ -18,7 +18,7 @@
 
     <section class="view-event-section py-5">
         <div class="container">
-            <h2 class="title  text-primary pb-3 mb-4">Player Info</h2>
+            <h2 class="title  text-primary pb-3 mb-4">PLAYER PROFILE</h2>
 
             <div class="row">
                 <div class="col-lg-9 order-lg-1 order-2">

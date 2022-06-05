@@ -75,7 +75,7 @@
                                 <td scope="row" class="text-primary font-weight-bold">{{ $item->state }}</td>
                                 <td scope="row" class="text-center"><span
                                         class="tilted-tag  bg-light-2  bg-secondary text-nowrap text-primary">
-                                        <span>{{ $item->date->format('dS,F Y h:m A') }}</span>
+                                        <span>{{ $item->date->format('dS,F Y h:i A') }}</span>
                                     </span></td>
                                 <td scope="row" class="font-weight-medium text-primary">{{ $item->location }}</td>
                             </tr>

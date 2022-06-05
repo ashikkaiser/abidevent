@@ -19,7 +19,7 @@
                         <tr>
                             <th scope="col">SL</th>
                             <th scope="col">Player</th>
-                            <th scope="col">School lavel</th>
+                            <th scope="col">SCHOOL LEVEL</th>
                             <th scope="col">Stats</th>
                         </tr>
                     </thead>

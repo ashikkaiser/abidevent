@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h2 class="text-primary title pb-2 mb-4">{{ $pageInfo->header }}</h2>
-                    <div class="row events-list">
+                    <div class=" events-list">
 
                         {!! $pageInfo->content !!}
                     </div>

@@ -17,7 +17,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $events = Events::where('date', '>=', Carbon::now()->toDateTimeString())->orderBy('date', 'asc')->take(5)->get();
+        $events = Events::where('date', '>=', Carbon::now()->toDateTimeString())->where('type', 'showcase')->orderBy('date', 'asc')->take(5)->get();
         $sliders = Sliders::all();
         $news = News::where('is_featured', true)->orderBy('created_at', "desc")->limit(4)->get();
         $pageInfo = Pages::where('page_slug', 'home')->first();

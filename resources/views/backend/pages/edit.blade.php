@@ -110,6 +110,7 @@
                                     <div class="card mb-4">
                                         <h5 class="card-header">Write Details</h5>
                                         <div class="card-body">
+                                            {{-- <textarea name="content">{!! $page->content !!}</textarea> --}}
                                             <div id="snow-toolbar">
                                                 <span class="ql-formats">
                                                     <select class="ql-font"></select>
@@ -166,11 +167,19 @@
     <script src="admin/assets/js/form-layouts.js"></script>
 @endsection
 @section('js')
+    {{-- <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script> --}}
+
+
     <script src="{{ asset('admin/assets/vendor/libs/quill/katex.js') }}"></script>
     <script src="{{ asset('admin/assets/vendor/libs/quill/quill.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"
         integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // CKEDITOR.replace('content', {
+        //     // skin: 'kama'
+        // });
+    </script>
     <script>
         $('.dropify').dropify({
             messages: {
@@ -189,7 +198,8 @@
             theme: 'snow'
         });
         snowEditor.on('text-change', function(delta, oldDelta, source) {
-            $('#detail').val(snowEditor.container.firstChild.innerHTML);
+            document.getElementById("detail").value = snowEditor.root.innerHTML;
+            // $('#detail').val(snowEditor.container.firstChild.innerHTML);
         });
     </script>
 @endsection

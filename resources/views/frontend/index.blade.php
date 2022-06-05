@@ -94,7 +94,7 @@
                                     <a href="{{ route('home.viewEvent', $item->id) }}">
                                         <div class="upcoming-event bg-white border-bottom d-flex align-items-center">
                                             <span class="tilted-tag text-nowrap bg-secondary text-white mr-3">
-                                                <span>{{ $item->date }}</span>
+                                                <span>{{ $item->date->format('dS,F Y h:i A') }}</span>
                                             </span>
                                             <h4>{{ $item->name }}</h4>
                                         </div>

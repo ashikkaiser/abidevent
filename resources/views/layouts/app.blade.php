@@ -129,7 +129,7 @@
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item mob-link"
-                                        href="{{ route('home.event', 'indivudual') }}">INDIVUDUAL
+                                        href="{{ route('home.event', 'indivudual') }}">INDIVIDUAL
                                         EVENT</a>
                                     <a class="dropdown-item mob-link"
                                         href="{{ route('home.event', 'showcase') }}">SHOWCASE
@@ -184,15 +184,13 @@
                                         <li class="nav-item"><a href="{{ route('home.index') }}"
                                                 class="nav-link {{ Route::currentRouteName() == 'home.index' ? 'active' : '' }}">Home</a>
                                         </li>
-                                        <li class="mobile-table nav-item"><a
-                                                class="nav-link
-                                                href="
-                                                {{ route('home.subscribe') }}">Subscribe</a></li>
-                                        <li class="mobile-table nav-item"><a
-                                                class="nav-link
-                                                href="
-                                                {{ route('home.recommendPlayer') }}">Recommend a
-                                                Player</a></li>
+                                        <li class="mobile-table nav-item"><a class="nav-link"
+                                                href="{{ route('home.subscribe') }}">Subscribe</a></li>
+                                        <li class="mobile-table nav-item">
+                                            <a class="nav-link"
+                                                href="{{ route('home.recommendPlayer') }}">Recommend a
+                                                Player</a>
+                                        </li>
                                         <li
                                             class="web-table nav-item dropdown  {{ Route::currentRouteName() == 'home.event' ? 'active' : '' }}">
                                             <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -311,7 +309,9 @@
                             <li class="d-flex align-items-center justify-content-center justify-content-md-start">
                                 <img src="/frontend/images/mail-icon.png" alt="mail-icon" class="mr-2">
                                 <span>
-                                    {{ json_decode(st()->contact)->email }} <br>
+                                    <a
+                                        href="mailto:{{ json_decode(st()->contact)->email }}">{{ json_decode(st()->contact)->email }}</a>
+                                    <br>
                                     Email us
                                 </span>
                             </li>

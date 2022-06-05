@@ -91,7 +91,7 @@
                     </tbody>
                 </table>
             </div>
-            <h2 class="title  text-primary pb-3 mb-4">Top Exit Valocity
+            <h2 class="title  text-primary pb-3 mb-4">Top EXIT VELOCITY
             </h2>
 
             <!-- leaderboard table  -->
@@ -102,7 +102,7 @@
                             <th scope="col">Rank</th>
                             <th scope="col">Name of player</th>
                             <th scope="col">School Name</th>
-                            <th scope="col" class="text-center">Exit Valocity </th>
+                            <th scope="col" class="text-center">Exit VELOCITY </th>
                         </tr>
                     </thead>
                     <tbody class="font-italic">
