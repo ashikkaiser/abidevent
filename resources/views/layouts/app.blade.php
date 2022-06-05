@@ -201,7 +201,7 @@
 
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                 <a class="dropdown-item"
-                                                    href="{{ route('home.event', 'indivudual') }}">INDIVUDUAL
+                                                    href="{{ route('home.event', 'indivudual') }}">INDIVIDUAL
                                                     EVENT</a>
                                                 <a class="dropdown-item"
                                                     href="{{ route('home.event', 'showcase') }}">SHOWCASE
