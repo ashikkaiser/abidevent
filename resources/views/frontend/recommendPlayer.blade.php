@@ -5,8 +5,8 @@
     <section id="CommonBanner" class="banner-blog">
         <div class="content text-center text-white">
             <div class="container">
-                <h1 class="text-uppercase mb-3">{{ $pageInfo->title }}</h1>
-                <p><em>Comming Soon</em></p>
+                <h1 class="text-uppercase mb-3">{{ $pageInfo->name }}</h1>
+                <p><em>{{ $pageInfo->title }}</em></p>
             </div>
         </div>
     </section>

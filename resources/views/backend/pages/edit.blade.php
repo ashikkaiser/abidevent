@@ -102,7 +102,7 @@
 
                             </div>
                         @endif
-                        @if ($page->page_slug == 'aboutus' || $page->page_slug == 'tos' || $page->page_slug == 'policy')
+                        @if ($page->page_slug == 'aboutus' || $page->page_slug == 'tos' || $page->page_slug == 'subscribe' || $page->page_slug == 'aboutus')
                             <div class="col-md-12">
                                 <label class="form-label" for="description">Description </label>
                                 <!-- Snow Theme -->

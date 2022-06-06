@@ -96,8 +96,8 @@ class FrontendController extends Controller
     }
     public function subscribe()
     {
-
-        return view('frontend.subscribe');
+        $pageInfo = Pages::where('page_slug', 'subscribe')->first();
+        return view('frontend.subscribe', compact('pageInfo'));
     }
     public function privacyPolicy()
     {
