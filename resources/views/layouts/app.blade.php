@@ -125,7 +125,7 @@
         }
 
         .input-search::placeholder {
-            color: #22a6b3;
+            color: black;
             font-size: 18px;
             letter-spacing: 2px;
             font-weight: 100;
@@ -230,7 +230,7 @@
                         <div class="search-box">
                             <form action="{{ route('home.players') }}" method="get">
                                 <button class="btn-search"><i class="fas fa-search"></i></button>
-                                <input type="text" name="q" class="input-search" placeholder="Search a player...">
+                                <input type="text" name="q" class="input-search" placeholder="Search player...">
                             </form>
                         </div>
 

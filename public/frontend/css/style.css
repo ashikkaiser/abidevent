@@ -233,10 +233,15 @@ header+main {
         max-width: 150px;
         top: -5px;
     }
-    .mobile-view{
-align-items: center;
-    justify-content: center;
-    display: flex;
+
+    .mobile-view {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .web-table {
+        display: none;
     }
 }
 
@@ -257,15 +262,17 @@ align-items: center;
 .collapsed:after {
     content: "\f106";
 }
-.mobile-table{
+
+.mobile-table {
     display: none;
 }
 
 @media (max-width: 767px) {
-    .mobile-table{
+    .mobile-table {
         display: block;
     }
-    .web-table{
-         display: none;
+
+    .web-table {
+        display: none;
     }
 }
