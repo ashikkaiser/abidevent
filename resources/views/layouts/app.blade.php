@@ -31,7 +31,7 @@
     <meta property="og:type" content="website" />
 
     <!-- Bootstrap core CSS -->
-    <link href="/frontend/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/frontend/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="/frontend/css/bootstrap.min.css" rel="stylesheet">
     <link href="/frontend/css/global.css" rel="stylesheet">
     <link href="/frontend/css/navbar.css" rel="stylesheet">
@@ -409,7 +409,7 @@
 
     <script src="/frontend/js/jquery-3.3.1.min.js"></script>
     <script src="/frontend/js/bootstrap.bundle.min.js"></script>
-    {{-- <script src="/frontend/js/fontawesome.min.js"></script> --}}
+    <script src="/frontend/fontawesome/js/all.js"></script>
 
     <script src="/frontend/js/script.js"></script>
     @yield('js')
