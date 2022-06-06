@@ -233,6 +233,11 @@ header+main {
         max-width: 150px;
         top: -5px;
     }
+    .mobile-view{
+align-items: center;
+    justify-content: center;
+    display: flex;
+    }
 }
 
 

@@ -39,7 +39,13 @@ class FrontendController extends Controller
     }
     public function players()
     {
-        $players = Students::paginate(50);
+        if (request()->has('q') && request()->q !== '') {
+            $q = request()->q;
+            $players = Students::where('name', 'LIKE', "%$q%")->paginate(50);
+        } else {
+            $players = Students::paginate(50);
+        }
+
         $pageInfo = Pages::where('page_slug', 'player')->first();
         return view('frontend.players.index', compact('players', 'pageInfo'));
     }

@@ -98,11 +98,12 @@
                                         </div>
                                         <div class="input-group input-group-merge m-2">
                                             <span id="github" class="input-group-text">
-                                                <i class="bx bxl-github"></i>
+                                                <i class="bx bxl-tiktok"></i>
                                             </span>
-                                            <input type="text" class="form-control" id="github"
-                                                value="{{ $social_link->github }}" placeholder="github"
-                                                name="social[github]" aria-label="John Doe" aria-describedby="github">
+                                            <input type="text" class="form-control" id="tiktok"
+                                                value="{{ isset($social_link->tiktok) ? $social_link->tiktok : '' }}"
+                                                placeholder="tiktok" name="social[tiktok]" aria-label="John Doe"
+                                                aria-describedby="tiktok">
                                         </div>
 
                                     </div>

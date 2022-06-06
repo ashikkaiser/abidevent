@@ -86,7 +86,6 @@
                 transform: rotate(360deg);
             }
         }
-
     </style>
 
     <style>
@@ -95,7 +94,74 @@
             letter-spacing: 2px;
             text-align: left !important;
         }
+    </style>
+    <style>
+        .input-search {
+            width: 280px;
+            border-radius: 0px;
+            background-color: #ffffff;
+            color: black;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+            padding: 10px;
+            border-style: none;
+            border-radius: 25px;
+            letter-spacing: 2px;
+            padding-right: 40px;
+            font-size: 18px;
+            outline: none;
+            margin-top: 4px;
+            /* height: 50px;
+            width: 50px;
+            border-style: none;
+            padding: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+            outline: none;
+            border-radius: 25px;
 
+            background-color: #22a6b3;
+            padding-right: 40px;
+            color: #fff; */
+        }
+
+        .input-search::placeholder {
+            color: #22a6b3;
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: 100;
+        }
+
+        .btn-search {
+            width: 50px;
+            height: 50px;
+            border-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+            color: #ffffff;
+            background-color: #154e9d;
+            pointer-events: painted;
+        }
+
+        /* .btn-search:focus~.input-search {
+            width: 300px;
+            border-radius: 0px;
+            background-color: #ffffff;
+            color: black;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+        } */
+
+
+
+        .search-box {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+        }
     </style>
 </head>
 
@@ -105,9 +171,9 @@
     <!------------ Header ------------>
     <header id="Header" class="fixed-top bg-white shadow-sm" data-spy="affix">
         <div class="header-top bg-primary">
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-lg-8">
+            <div class="">
+                <div class="row justify-content-end items-center">
+                    <div class="col-lg-8 col-md-8">
                         <ul
                             class="header-top-menu mb-0 w-100 d-flex justify-content-xl-between justify-content-end text-uppercase">
                             <li class="web-table"><a href="{{ route('home.subscribe') }}">Subscribe</a></li>
@@ -160,8 +226,18 @@
                             <li class="web-table"><a href="{{ route('home.blogs') }}">News</a></li>
                         </ul>
                     </div>
+                    <div class="col-md-2 mb-2 mobile-view">
+                        <div class="search-box">
+                            <form action="{{ route('home.players') }}" method="get">
+                                <button class="btn-search"><i class="fas fa-search"></i></button>
+                                <input type="text" name="q" class="input-search" placeholder="Search a player...">
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="header-bottom">
             <div class="container">
@@ -275,6 +351,7 @@
                                     <a href="{{ $item }}" class="text-secondary">
                                         <span class="fab fa-{{ $key }}"></span>
                                     </a>
+                                    {{-- <i class="fab fa-tiktok"></i> --}}
                                 </li>
                             @endforeach
                             {{-- <li class="p-2"><a href="#" class="text-secondary"><span
@@ -332,7 +409,7 @@
 
     <script src="/frontend/js/jquery-3.3.1.min.js"></script>
     <script src="/frontend/js/bootstrap.bundle.min.js"></script>
-    <script src="/frontend/js/fontawesome.min.js"></script>
+    {{-- <script src="/frontend/js/fontawesome.min.js"></script> --}}
 
     <script src="/frontend/js/script.js"></script>
     @yield('js')
