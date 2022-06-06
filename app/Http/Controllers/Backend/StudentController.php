@@ -220,10 +220,11 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Students $student)
+    public function destroy($id)
     {
-        Statics::where('student_id', $student->id)->delete();
-        $student->delete();
+        $s = Students::find($id);
+        Statics::where('student_id', $s->id)->delete();
+        $s->delete();
         return redirect()->route('athlete.index')->with('message', 'Player Deleted Successfully');
     }
 
