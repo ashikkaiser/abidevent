@@ -2,6 +2,11 @@
 @section('title', $pageInfo->title)
 
 @section('content')
+    <style>
+        .banner-leaderboard {
+            background: url('{{ url($pageInfo->banner) }}') no-repeat center !important;
+        }
+    </style>
     <section id="CommonBanner" class="banner-leaderboard">
         <div class="content text-center text-white">
             <div class="container">
