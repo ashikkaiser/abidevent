@@ -53,6 +53,7 @@ Route::group(['middleware' => ['auth:web'], 'prefix' => 'admin'], function () {
     Route::resource('athlete', StudentController::class);
     Route::post('athletes/manageStatics', [StudentController::class, 'manageStatics'])->name('student.manageStatics');
     Route::get('athletes/destroyStatics/{id}', [StudentController::class, 'destroyStatics'])->name('student.destroyStatics');
+    Route::post('removeImage', [NewsController::class, 'removeImage'])->name('event.removeImage');
     Route::resource('event', EventController::class);
     Route::resource('news', NewsController::class);
     Route::resource('page', PagesController::class);

@@ -84,16 +84,27 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $news = News::find($id);
         $news->title      = $request['title'];
         if ($request->hasFile('image')) {
             $news->image      = $request->image->store('assets/upload/news');
         }
 
+
+
         $news->is_featured = $request->is_featured ? true : false;
         $news->description = $request['description'];
         $news->save();
         return redirect()->route('news.index')->with('message', 'News Updated Successfully');
+    }
+
+    public function removeImage(Request $request)
+    {
+        $news = News::find($request->id);
+        $news->image      = null;
+        $news->save();
+        return response()->json(['success' => "true"]);
     }
 
     /**

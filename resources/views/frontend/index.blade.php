@@ -69,7 +69,7 @@
                                                     </div>
                                                     <span
                                                         class="tilted-tag  bg-light-2  bg-secondary event-date text-primary position-absolute">
-                                                        <span>{{ $item->created_at->format('d-m-Y') }}</span>
+                                                        <span>{{ $item->created_at->format('m-d-Y') }}</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -179,7 +179,6 @@
                     color: #fff;
                     opacity: 1;
                 }
-
             </style>
             <section class="home-video-section">
                 <div class="video-box">

@@ -30,9 +30,10 @@
                             <div class="col-md-5">
                                 <label class="form-label" for="date">Image</label>
                                 <input type="file" name="image" class="dropify"
-                                    data-default-file="/{{ $news->image }}" />
-                            </div>
-                            <div class="col-md-2">
+                                    value="{{ old('title', $news->image) }}"
+                                    @if ($news->image) data-default-file="/{{ $news->image }} @endif " />
+                                </div>
+                                <div class=" col-md-2">
                                 <label class="form-label" for="date"></label>
                                 <div class="form-check mt-3">
                                     <label class="form-check-label" for="defaultCheck1"> Featured News </label>
@@ -104,6 +105,7 @@
         <!-- / Content -->
 
     </div>
+
     <!-- Content wrapper -->
     <!-- Page JS -->
     <script src="admin/assets/js/form-layouts.js"></script>
@@ -115,7 +117,7 @@
         integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        $('.dropify').dropify({
+        var drEvent = $('.dropify').dropify({
             messages: {
                 'default': 'click a file here',
                 'replace': 'Drag and drop or click to replace',
@@ -123,7 +125,16 @@
                 'error': 'Ooops, something wrong happended.'
             }
         });
+        drEvent.on('dropify.afterClear', function(event, element) {
+            $.post("{{ route('event.removeImage') }}", {
+                id: "{{ $news->id }}",
+                _token: "{{ csrf_token() }}",
+            })
+        });
     </script>
+
+
+    <script></script>
     <script>
         const snowEditor = new Quill('#snow-editor', {
             bounds: '#snow-editor',

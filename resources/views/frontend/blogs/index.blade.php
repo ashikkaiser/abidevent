@@ -31,7 +31,7 @@
                                             </div>
                                             <span
                                                 class="tilted-tag  bg-light-2  bg-secondary event-date text-primary position-absolute">
-                                                <span>{{ $item->created_at->format('d-m-Y') }}</span>
+                                                <span>{{ $item->created_at->format('m-d-Y') }}</span>
                                             </span>
                                         </div>
                                     </div>
@@ -54,7 +54,7 @@
                         @foreach ($blogs as $item)
                             <div class="upcoming-event bg-white border-bottom d-flex align-items-center">
                                 <span class="tilted-tag text-nowrap bg-secondary text-white mr-3">
-                                    <span>{{ $item->created_at->format('d-m-Y') }}</span>
+                                    <span>{{ $item->created_at->format('m-d-Y') }}</span>
                                 </span>
                                 <a href="{{ route('home.viewBlog', $item->id) }}">
                                     <h4>{{ $item->title }}</h4>
