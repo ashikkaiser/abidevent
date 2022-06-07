@@ -37,17 +37,22 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+        // $request->validate([
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
 
 
-        News::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'image' => $request->image->store('assets/upload/news'),
-            'is_featured' => $request->is_featured ? true : false,
-        ]);
+        $news =  new News();
+        $news->title      = $request['title'];
+        if ($request->hasFile('image')) {
+            $news->image      = $request->image->store('assets/upload/news');
+        }
+
+
+
+        $news->is_featured = $request->is_featured ? true : false;
+        $news->description = $request['description'];
+        $news->save();
 
         return redirect()->route('news.index')->with('message', 'News Added Successfully');
     }
@@ -113,8 +118,9 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy($id)
     {
+        $news = News::find($id);
         $news->delete();
         return redirect()->route('news.index')->with('message', 'News Deleted Successfully');
     }
