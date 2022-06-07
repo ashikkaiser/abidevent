@@ -30,9 +30,9 @@
                             <div class="col-md-5">
                                 <label class="form-label" for="date">Image</label>
                                 <input type="file" name="image" class="dropify"
-                                    @if ($news->image) data-default-file="/{{ $news->image }} @endif " />
-                                    </div>
-                                    <div class="  col-md-2">
+                                    @if ($news->image) data-default-file="/{{ $news->image }} @endif" />
+                            </div>
+                            <div class="  col-md-2">
                                 <label class="form-label" for="date"></label>
                                 <div class="form-check mt-3">
                                     <label class="form-check-label" for="defaultCheck1"> Featured News </label>
