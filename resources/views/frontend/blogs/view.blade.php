@@ -1,11 +1,13 @@
 @extends('layouts.app')
+@section('title', $blog->title)
+
 
 @section('content')
     <section id="CommonBanner" class="banner-blog">
         <div class="content text-center text-white">
             <div class="container">
                 <h1 class="text-uppercase mb-3">Blogs</h1>
-                <p><em>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</em></p>
+                {{-- <p><em>{{ $blog->title }}</em></p> --}}
             </div>
         </div>
     </section>
@@ -34,10 +36,10 @@
                             </span>
 
                         </div>
-                       
+
                         <div class="post-action py-4 border-top d-flex align-items-center justify-content-between">
                             <a href="{{ $blog->previous() ? route('home.viewBlog', $blog->previous()->id) : '#' }}"
-                                    class=" btn btn-outline-primary py-2">Previous </a>
+                                class=" btn btn-outline-primary py-2">Previous </a>
                             <a href="{{ $blog->next() ? route('home.viewBlog', $blog->next()->id) : '#' }}"
                                 class="btn btn-outline-primary py-2">Next</a>
                         </div>
@@ -51,9 +53,11 @@
                         @foreach ($recentNews as $item)
                             <div class="upcoming-event bg-white border-bottom d-flex align-items-center">
                                 <span class="tilted-tag text-nowrap bg-secondary text-white mr-3">
-                                  <span> {{ $item->created_at->format('d-m-Y') }} </span>
+                                    <span> {{ $item->created_at->format('d-m-Y') }} </span>
                                 </span>
-                                <a href="{{ route('home.viewBlog', $item->id) }}"><h4>{{ $item->title }}</h4></a> 
+                                <a href="{{ route('home.viewBlog', $item->id) }}">
+                                    <h4>{{ $item->title }}</h4>
+                                </a>
                             </div>
                         @endforeach
 

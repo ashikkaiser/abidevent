@@ -2,6 +2,9 @@
 @section('css')
     <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/quill/typography.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/quill/editor.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+        integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 @section('content')
     <!-- Content wrapper -->
@@ -24,7 +27,7 @@
                             </div>
                             <div class="col-md-5">
                                 <label class="form-label" for="date">Image</label>
-                                <input class="form-control" type="file" id="image" name="image">
+                                <input class="dropify" type="file" id="image" name="image">
                             </div>
                             <div class="col-md-2">
                                 <label class="form-label" for="date"></label>
@@ -101,6 +104,19 @@
 @section('js')
     <script src="{{ asset('admin/assets/vendor/libs/quill/katex.js') }}"></script>
     <script src="{{ asset('admin/assets/vendor/libs/quill/quill.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"
+        integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.dropify').dropify({
+            messages: {
+                'default': 'click a file here',
+                'replace': 'Drag and drop or click to replace',
+                'remove': 'Remove',
+                'error': 'Ooops, something wrong happended.'
+            }
+        });
+    </script>
     <script>
         const snowEditor = new Quill('#snow-editor', {
             bounds: '#snow-editor',
