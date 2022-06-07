@@ -5,6 +5,8 @@
     <style>
         .banner-leaderboard {
             background: url('{{ url($pageInfo->banner) }}') no-repeat center !important;
+            background-color: #2f5596 !important;
+            background-size: cover !important;
         }
     </style>
     <section id="CommonBanner" class="banner-leaderboard">
