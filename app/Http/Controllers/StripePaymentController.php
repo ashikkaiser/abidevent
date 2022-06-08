@@ -17,7 +17,7 @@ class StripePaymentController extends Controller
 
             $payment = json_encode(Stripe\Charge::create([
                 "amount" => round($request->amount * 100),
-                "currency" => "eur",
+                "currency" => "usd",
                 "source" => $request->stripeToken
             ]));
 

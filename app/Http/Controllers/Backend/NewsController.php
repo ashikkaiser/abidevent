@@ -37,19 +37,11 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-
-
         $news =  new News();
         $news->title      = $request['title'];
         if ($request->hasFile('image')) {
             $news->image      = $request->image->store('assets/upload/news');
         }
-
-
-
         $news->is_featured = $request->is_featured ? true : false;
         $news->description = $request['description'];
         $news->save();
