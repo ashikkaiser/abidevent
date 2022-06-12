@@ -80,11 +80,11 @@
                                     value="{{ old('state') }}" placeholder="state" />
                             </div>
 
-                            {{-- <div class="col-md-4">
+                            <div class="col-md-4">
                                 <label class="form-label" for="position">Position</label>
                                 <input type="text" name="position" id="position" class="form-control"
                                     value="{{ old('position') }}" placeholder="Position" />
-                            </div> --}}
+                            </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="description">Description </label>
                                 <textarea type="text" name="description" id="description" class="form-control dob-picker"

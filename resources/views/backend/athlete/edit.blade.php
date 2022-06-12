@@ -86,16 +86,15 @@
                                     class="form-control" placeholder="state" />
                             </div>
 
-                            {{-- <div class="col-md-4">
+                            <div class="col-md-4">
                                 <label class="form-label" for="position">Position</label>
                                 <input type="text" value="{{ old('position', $user->position) }}" name="position"
                                     id="position" class="form-control" placeholder="Position" />
-                            </div> --}}
+                            </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="description">Description </label>
                                 <textarea type="text" name="description" value="{{ old('description', $user->description) }}" id="description"
-                                    class="form-control dob-picker"
-                                    placeholder="Write Details">{{ old('description', $user->description) }}</textarea>
+                                    class="form-control dob-picker" placeholder="Write Details">{{ old('description', $user->description) }}</textarea>
                             </div>
 
                             <div class="col-md-4">

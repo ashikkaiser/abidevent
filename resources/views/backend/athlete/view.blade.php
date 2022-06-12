@@ -254,10 +254,10 @@
                                                                                         for="top_ch_spin">Top Spin for CH
                                                                                         Velocity</label>
                                                                                     <input type="text" name="top_ch_spin"
-                                                                                        value="TOP SPIN FOR CH VELOCITY"
+                                                                                        value="{{ $item->top_ch_spin }}"
                                                                                         id="top_ch_spin"
                                                                                         class="form-control"
-                                                                                        placeholder="{{ $item->top_ch_spin }}">
+                                                                                        placeholder="TOP SPIN FOR CH VELOCITY">
                                                                                 </div>
                                                                                 <div class="col-md-3">
                                                                                     <label class="form-label"
