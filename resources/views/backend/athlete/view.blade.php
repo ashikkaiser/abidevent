@@ -105,10 +105,10 @@
                                             <span class="fw-bold me-2">STATE:</span>
                                             <span>{{ $user->state }}</span>
                                         </li>
-                                        {{-- <li class="mb-3">
+                                        <li class="mb-3">
                                             <span class="fw-bold me-2">POSITION:</span>
                                             <span>{{ $user->position }}</span>
-                                        </li> --}}
+                                        </li>
                                         <li class="mb-3">
                                             <span class="fw-bold me-2">DESCRIPTION:</span>
                                             <span>{{ $user->description }}</span>
