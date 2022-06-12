@@ -22,6 +22,7 @@ class EventController extends Controller
             return redirect('home');
         }
         $events = Events::where('type', request()->type)->get();
+        // dd($events);
         return view('backend.event.index', compact('events'));
     }
 
@@ -52,8 +53,8 @@ class EventController extends Controller
             'date' => $request->date,
             'state' => $request->state,
             'location' => $request->location,
-            'price_type' => json_encode(array_filter($request->price_type)),
-            'price' => json_encode(array_filter($request->price)),
+            'price_type' => json_encode(array_values(array_filter($request->price_type))),
+            'price' => json_encode(array_values(array_filter($request->price))),
             'description' => $request->description,
         ]);
 
@@ -110,6 +111,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $event = Events::find($id);
+
         return view('backend.event.edit', compact('event'));
     }
 
@@ -122,11 +124,10 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $event = Events::find($id);
         $event->name      = $request['name'];
-        $event->price_type      = json_encode(array_filter($request->price_type));
-        $event->price      = json_encode(array_filter($request->price));
+        $event->price_type      = json_encode(array_values(array_filter($request->price_type)));
+        $event->price      = json_encode(array_values(array_filter($request->price)));
         $event->date      = $request['date'];
         $event->description = $request['description'];
         $event->state = $request['state'];

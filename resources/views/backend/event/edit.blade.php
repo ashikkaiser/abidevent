@@ -131,8 +131,7 @@
 
                             <div class="col-md-5">
                                 <label class="form-label" for="description">Description </label>
-                                <textarea type="text" name="description" id="description" class="form-control dob-picker"
-                                    placeholder="Write Details">{{ old('description', $event->description) }}</textarea>
+                                <textarea type="text" name="description" id="description" class="form-control dob-picker" placeholder="Write Details">{{ old('description', $event->description) }}</textarea>
                             </div>
 
                         </div>
