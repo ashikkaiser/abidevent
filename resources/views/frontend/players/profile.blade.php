@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/frontend/css/slick-theme.min.css">
 @endsection
 @section('content')
+
+
     <section id="CommonBanner" class="banner-player">
         <div class="content text-center text-white">
             <div class="container">
@@ -225,7 +227,6 @@
             color: #fff;
             opacity: 1;
         }
-
     </style>
     <section class="playerVideos">
         <div class="container">
@@ -233,7 +234,7 @@
                 @if (getYouTubeId($player->statics['velocity_video']))
                     <div class="player-video-box text-center">
                         <div class="video-box-2 position-relative mb-4">
-                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['velocity_video']) }}/maxresdefault.jpg"
+                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['velocity_video']) }}/hqdefault.jpg"
                                 alt="video thumbnail">
                             <div class="overlay position-absolute d-flex align-items-center justify-content-center">
                                 <span class="btn-play cursor-pointer"
@@ -251,7 +252,7 @@
                 @if (getYouTubeId($player->statics['velocity_video2']))
                     <div class="player-video-box text-center">
                         <div class="video-box-2 position-relative mb-4">
-                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['velocity_video2']) }}/maxresdefault.jpg"
+                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['velocity_video2']) }}/hqdefault.jpg"
                                 alt="video thumbnail">
                             <div class="overlay position-absolute d-flex align-items-center justify-content-center">
                                 <span class="btn-play cursor-pointer"
@@ -269,7 +270,7 @@
                 @if (getYouTubeId($player->statics['sprint_video']))
                     <div class="player-video-box text-center">
                         <div class="video-box-2 position-relative mb-4">
-                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['sprint_video']) }}/maxresdefault.jpg"
+                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['sprint_video']) }}/hqdefault.jpg"
                                 alt="video thumbnail">
                             <div class="overlay position-absolute d-flex align-items-center justify-content-center">
                                 <span class="btn-play cursor-pointer"
@@ -287,7 +288,7 @@
                 @if (getYouTubeId($player->statics['jump_video_link']))
                     <div class="player-video-box text-center">
                         <div class="video-box-2 position-relative mb-4">
-                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['jump_video_link']) }}/maxresdefault.jpg"
+                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['jump_video_link']) }}/hqdefault.jpg"
                                 alt="video thumbnail">
                             <div class="overlay position-absolute d-flex align-items-center justify-content-center">
                                 <span class="btn-play cursor-pointer"
@@ -305,7 +306,7 @@
                 @if (getYouTubeId($player->statics['hitting_video']))
                     <div class="player-video-box text-center">
                         <div class="video-box-2 position-relative mb-4">
-                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['hitting_video']) }}/maxresdefault.jpg"
+                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['hitting_video']) }}/hqdefault.jpg"
                                 alt="video thumbnail">
                             <div class="overlay position-absolute d-flex align-items-center justify-content-center">
                                 <span class="btn-play cursor-pointer"
@@ -323,7 +324,7 @@
                 @if (getYouTubeId($player->statics['resistance_video']))
                     <div class="player-video-box text-center">
                         <div class="video-box-2 position-relative mb-4">
-                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['resistance_video']) }}/maxresdefault.jpg"
+                            <img src="https://img.youtube.com/vi/{{ getYouTubeId($player->statics['resistance_video']) }}/hqdefault.jpg"
                                 alt="video thumbnail">
                             <div class="overlay position-absolute d-flex align-items-center justify-content-center">
                                 <span class="btn-play cursor-pointer"
@@ -479,8 +480,8 @@
                                             <div class="player-video-box text-center">
                                                 <div class="video-box-2 position-relative mb-4">
 
-                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['velocity_video']) }}/maxresdefault.jpg"
-                                                        alt="video thumbnail">
+                                                    {{-- <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['velocity_video']) }}/hqdefault.jpg"
+                                                        alt="video thumbnail"> --}}
                                                     <div
                                                         class="overlay position-absolute d-flex align-items-center justify-content-center">
                                                         <span class="btn-play cursor-pointer"
@@ -500,7 +501,7 @@
                                         @if (getYouTubeId($item->velocity_video2))
                                             <div class="player-video-box text-center">
                                                 <div class="video-box-2 position-relative mb-4">
-                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['velocity_video2']) }}/maxresdefault.jpg"
+                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['velocity_video2']) }}/hqdefault.jpg"
                                                         alt="video thumbnail">
                                                     <div
                                                         class="overlay position-absolute d-flex align-items-center justify-content-center">
@@ -521,7 +522,7 @@
                                         @if (getYouTubeId($item->sprint_video))
                                             <div class="player-video-box text-center">
                                                 <div class="video-box-2 position-relative mb-4">
-                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['sprint_video']) }}/maxresdefault.jpg"
+                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['sprint_video']) }}/hqdefault.jpg"
                                                         alt="video thumbnail">
                                                     <div
                                                         class="overlay position-absolute d-flex align-items-center justify-content-center">
@@ -542,7 +543,7 @@
                                         @if (getYouTubeId($item->jump_video_link))
                                             <div class="player-video-box text-center">
                                                 <div class="video-box-2 position-relative mb-4">
-                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['jump_video_link']) }}/maxresdefault.jpg"
+                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['jump_video_link']) }}/hqdefault.jpg"
                                                         alt="video thumbnail">
                                                     <div
                                                         class="overlay position-absolute d-flex align-items-center justify-content-center">
@@ -563,7 +564,7 @@
                                         @if (getYouTubeId($item->hitting_video))
                                             <div class="player-video-box text-center">
                                                 <div class="video-box-2 position-relative mb-4">
-                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['hitting_video']) }}/maxresdefault.jpg"
+                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['hitting_video']) }}/hqdefault.jpg"
                                                         alt="video thumbnail">
                                                     <div
                                                         class="overlay position-absolute d-flex align-items-center justify-content-center">
@@ -584,7 +585,7 @@
                                         @if (getYouTubeId($item->resistance_video))
                                             <div class="player-video-box text-center">
                                                 <div class="video-box-2 position-relative mb-4">
-                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['resistance_video']) }}/maxresdefault.jpg"
+                                                    <img src="https://img.youtube.com/vi/{{ getYouTubeId($item['resistance_video']) }}/hqdefault.jpg"
                                                         alt="video thumbnail">
                                                     <div
                                                         class="overlay position-absolute d-flex align-items-center justify-content-center">
