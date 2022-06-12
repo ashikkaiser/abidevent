@@ -135,7 +135,7 @@
                                                                 Range</label>
                                                             <input type="text" name="fb_range" id="fb_range"
                                                                 class="form-control" placeholder="FB Range"
-                                                                value="{{ old('fb_range', $user->statics->top_pitch_velocity) }}" />
+                                                                value="{{ old('fb_range', $user->statics->fb_range) }}" />
                                                         </div>
                                                         <div class="col-md-4">
                                                             <label class="form-label" for="top_spin">Top
@@ -331,7 +331,7 @@
                                                             <label class="form-label" for="40yd_sprint_time"> 40yd
                                                                 sprint time</label>
                                                             <input type="text" name="40yd_sprint_time" id="40yd_sprint_time"
-                                                                value="{{ old('40yd_sprint_time', $user->statics['top_pitch_velocity']) }}"
+                                                                value="{{ old('40yd_sprint_time', $user->statics['40yd_sprint_time']) }}"
                                                                 class="form-control" placeholder="40yd sprint time" />
                                                         </div>
                                                         <div class="col-md-4">
@@ -446,7 +446,7 @@
                                                                 Resistance video link </label>
                                                             <input type="text" name="resistance_video" id="resistance_video"
                                                                 class="form-control"
-                                                                value="{{ old('resistance_video', $user->statics->resistance_video_date) }}"
+                                                                value="{{ old('resistance_video', $user->statics->resistance_video) }}"
                                                                 placeholder="Resistance video link " />
                                                         </div>
                                                         <div class="col-md-5">
