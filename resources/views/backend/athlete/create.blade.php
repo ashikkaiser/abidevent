@@ -1,8 +1,7 @@
 @extends('layouts.main')
 @section('css')
     <link rel="stylesheet" href="{{ asset('/admin/assets/vendor/libs/flatpickr/flatpickr.css') }}" />
-    <link rel="stylesheet"
-        href="{{ asset('/admin/assets/vendor/libs/bootstrap-datepicker/bootstrap-datepicker.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/admin/assets/vendor/libs/bootstrap-datepicker/bootstrap-datepicker.css') }}" />
     <link rel="stylesheet"
         href="{{ asset('/admin/assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.css') }}" />
     <link rel="stylesheet" href="{{ asset('/admin/assets/vendor/libs/jquery-timepicker/jquery-timepicker.css') }}" />
@@ -46,14 +45,14 @@
 
                             <div class="col-md-4">
                                 <label class="form-label" for="height">Height</label>
-                                <input type="text" id="height" name="height" class="form-control" placeholder="Height"
-                                    value="{{ old('height') }}" />
+                                <input type="text" id="height" name="height" class="form-control"
+                                    placeholder="Height" value="{{ old('height') }}" />
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label" for="weight">Weight</label>
-                                <input type="text" name="weight" id="weight" class="form-control" placeholder="Weight"
-                                    value="{{ old('weight') }}" />
+                                <input type="text" name="weight" id="weight" class="form-control"
+                                    placeholder="Weight" value="{{ old('weight') }}" />
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="school_level">School Level</label>
@@ -70,8 +69,8 @@
 
                             <div class="col-md-4">
                                 <label class="form-label" for="school_name">School Name</label>
-                                <input type="text" name="school_name" id="school_name" value="{{ old('school_name') }}"
-                                    class="form-control" placeholder="school name" />
+                                <input type="text" name="school_name" id="school_name"
+                                    value="{{ old('school_name') }}" class="form-control" placeholder="school name" />
                             </div>
 
                             <div class="col-md-4">
@@ -111,7 +110,8 @@
                                                     aria-controls="collapsePitchingStats"> Pitching Stats </button>
                                             </h2>
                                             <div id="collapsePitchingStats" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingPitchingStats" data-bs-parent="#collapsibleSection">
+                                                aria-labelledby="headingPitchingStats"
+                                                data-bs-parent="#collapsibleSection">
                                                 <div class="accordion-body">
                                                     <div class="row g-3">
 
@@ -140,8 +140,9 @@
                                                         <div class="col-md-3">
                                                             <label class="form-label" for="top_ch_velocity">Top CH
                                                                 Velocity</label>
-                                                            <input type="text" name="top_ch_velocity" id="top_ch_velocity"
-                                                                class="form-control" placeholder="Top ch velocity"
+                                                            <input type="text" name="top_ch_velocity"
+                                                                id="top_ch_velocity" class="form-control"
+                                                                placeholder="Top ch velocity"
                                                                 value="{{ old('top_ch_velocity') }}" />
                                                         </div>
                                                         <div class="col-md-3">
@@ -155,8 +156,9 @@
                                                         <div class="col-md-3">
                                                             <label class="form-label" for="top_cb_velocity">Top CB
                                                                 Velocity</label>
-                                                            <input type="text" name="top_cb_velocity" id="top_cb_velocity"
-                                                                class="form-control" placeholder="Top cb velocity"
+                                                            <input type="text" name="top_cb_velocity"
+                                                                id="top_cb_velocity" class="form-control"
+                                                                placeholder="Top cb velocity"
                                                                 value="{{ old('top_cb_velocity') }}" />
                                                         </div>
                                                         <div class="col-md-3">
@@ -170,8 +172,9 @@
                                                             <label class="form-label" for="top_sl_velocity">Top SL
                                                                 Velocity</label>
                                                             <input type="text" name="top_sl_velocity"
-                                                                value="{{ old('top_sl_velocity') }}" id="top_sl_velocity"
-                                                                class="form-control" placeholder="Top sl velocity" />
+                                                                value="{{ old('top_sl_velocity') }}"
+                                                                id="top_sl_velocity" class="form-control"
+                                                                placeholder="Top sl velocity" />
                                                         </div>
                                                         <div class="col-md-3">
                                                             <label class="form-label" for="top_sl_spin">Top Spin for SL
@@ -185,8 +188,9 @@
                                                             <label class="form-label" for="top_ct_velocity">Top CT
                                                                 Velocity</label>
                                                             <input type="text" name="top_ct_velocity"
-                                                                value="{{ old('top_ct_velocity') }}" id="top_ct_velocity"
-                                                                class="form-control" placeholder="Top CT Velocity" />
+                                                                value="{{ old('top_ct_velocity') }}"
+                                                                id="top_ct_velocity" class="form-control"
+                                                                placeholder="Top CT Velocity" />
                                                         </div>
                                                         <div class="col-md-3">
                                                             <label class="form-label" for="top_ct_velocity">Top spin for
@@ -201,8 +205,9 @@
                                                             <label class="form-label" for="top_kn_velocity">Top KN
                                                                 Velocity</label>
                                                             <input type="text" name="top_kn_velocity"
-                                                                value="{{ old('top_kn_velocity') }}" id="top_kn_velocity"
-                                                                class="form-control" placeholder="Top KN Velocity" />
+                                                                value="{{ old('top_kn_velocity') }}"
+                                                                id="top_kn_velocity" class="form-control"
+                                                                placeholder="Top KN Velocity" />
                                                         </div>
                                                         <div class="col-md-3">
                                                             <label class="form-label" for="top_kn_spin">Top spin For KN
@@ -225,7 +230,8 @@
                                                     Status </button>
                                             </h2>
                                             <div id="collapseHittingStatus" class="accordion-collapse collapse"
-                                                aria-labelledby="headingHittingStatus" data-bs-parent="#collapsibleSection">
+                                                aria-labelledby="headingHittingStatus"
+                                                data-bs-parent="#collapsibleSection">
                                                 <div class="accordion-body">
                                                     <div class="row">
                                                         <div class="col-md-4">
@@ -244,12 +250,12 @@
                                                                 class="form-control" placeholder="Max Distance (FT)" />
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <label class="form-label" for="avarage_distance"> Avarage
+                                                            <label class="form-label" for="avarage_distance"> Average
                                                                 Distance (FT)</label>
                                                             <input type="text" name="avarage_distance"
                                                                 value="{{ old('avarage_distance') }}"
                                                                 id="avarage_distance" class="form-control"
-                                                                placeholder="Avarage Distance (FT)" />
+                                                                placeholder="Average Distance (FT)" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -302,20 +308,22 @@
                                                     Status</button>
                                             </h2>
                                             <div id="collapseOthersStatus" class="accordion-collapse collapse"
-                                                aria-labelledby="headingOthersStatus" data-bs-parent="#collapsibleSection">
+                                                aria-labelledby="headingOthersStatus"
+                                                data-bs-parent="#collapsibleSection">
                                                 <div class="accordion-body">
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <label class="form-label" for="vertical_jump">
                                                                 Vertical jump</label>
                                                             <input type="text" name="vertical_jump" id="vertical_jump"
-                                                                value="{{ old('vertical_jump') }}"
-                                                                class="form-control" placeholder="Top pitch velocity" />
+                                                                value="{{ old('vertical_jump') }}" class="form-control"
+                                                                placeholder="Top pitch velocity" />
                                                         </div>
                                                         <div class="col-md-4">
                                                             <label class="form-label" for="40yd_sprint_time"> 40yd
                                                                 sprint time</label>
-                                                            <input type="text" name="40yd_sprint_time" id="40yd_sprint_time"
+                                                            <input type="text" name="40yd_sprint_time"
+                                                                id="40yd_sprint_time"
                                                                 value="{{ old('40yd_sprint_time') }}"
                                                                 class="form-control" placeholder="40yd sprint time" />
                                                         </div>
@@ -346,8 +354,8 @@
                                                         <div class="col-md-7">
                                                             <label class="form-label" for="velocity_video"> Velocity
                                                                 /Pitch video link </label>
-                                                            <input type="text" name="velocity_video" id="velocity_video"
-                                                                value="{{ old('velocity_video') }}"
+                                                            <input type="text" name="velocity_video"
+                                                                id="velocity_video" value="{{ old('velocity_video') }}"
                                                                 class="form-control"
                                                                 placeholder="Velocity /Pitch video link" />
                                                         </div>
@@ -362,7 +370,8 @@
                                                             <label class="form-label" for="velocity_video2"> Velocity
                                                                 /Pitch video link 2
                                                             </label>
-                                                            <input type="text" name="velocity_video2" id="velocity_video2"
+                                                            <input type="text" name="velocity_video2"
+                                                                id="velocity_video2"
                                                                 value="{{ old('velocity_video2') }}"
                                                                 class="form-control"
                                                                 placeholder="Velocity /Pitch video link 2" />
@@ -370,8 +379,9 @@
                                                         <div class="col-md-5">
                                                             <label class="form-label" for="valo_video_date2">Video date
                                                             </label>
-                                                            <input type="text" id="valo_video_date2" name="valo_video_date2"
-                                                                class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                            <input type="text" id="valo_video_date2"
+                                                                name="valo_video_date2" class="form-control dob-picker"
+                                                                placeholder="YYYY-MM-DD" />
                                                         </div>
 
                                                         <div class="col-md-7">
@@ -392,7 +402,8 @@
                                                         <div class="col-md-7">
                                                             <label class="form-label" for="jump_video_link"> Jump video
                                                                 link: </label>
-                                                            <input type="text" name="jump_video_link" id="jump_video_link"
+                                                            <input type="text" name="jump_video_link"
+                                                                id="jump_video_link"
                                                                 value="{{ old('jump_video_link') }}"
                                                                 class="  form-control" placeholder="Jump video link:" />
                                                         </div>
@@ -411,8 +422,8 @@
                                                             <label class="form-label" for="hitting_video"> Hitting
                                                                 video link </label>
                                                             <input type="text" id="hitting_video" name="hitting_video"
-                                                                value="{{ old('hitting_video') }}"
-                                                                class="form-control" placeholder="Hitting vide link" />
+                                                                value="{{ old('hitting_video') }}" class="form-control"
+                                                                placeholder="Hitting vide link" />
                                                         </div>
                                                         <div class="col-md-5">
                                                             <label class="form-label" for="hitting_video_date">It's
@@ -420,14 +431,15 @@
                                                             <input type="text" name="hitting_video_date"
                                                                 id="hitting_video_date"
                                                                 value="{{ old('hitting_video_date') }}"
-                                                                class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                                class="form-control dob-picker"
+                                                                placeholder="YYYY-MM-DD" />
                                                         </div>
 
                                                         <div class="col-md-7">
                                                             <label class="form-label" for="resistance_video">
                                                                 Resistance video link </label>
-                                                            <input type="text" name="resistance_video" id="resistance_video"
-                                                                class="form-control"
+                                                            <input type="text" name="resistance_video"
+                                                                id="resistance_video" class="form-control"
                                                                 value="{{ old('resistance_video') }}"
                                                                 placeholder="Resistance video link " />
                                                         </div>
@@ -437,7 +449,8 @@
                                                             <input type="text" name="resistance_video_date"
                                                                 id="resistance_video_date"
                                                                 value="{{ old('resistance_video_date') }}"
-                                                                class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                                class="form-control dob-picker"
+                                                                placeholder="YYYY-MM-DD" />
                                                         </div>
                                                     </div>
                                                 </div>

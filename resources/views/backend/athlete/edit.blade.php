@@ -1,8 +1,7 @@
 @extends('layouts.main')
 @section('css')
     <link rel="stylesheet" href="{{ asset('/admin/assets/vendor/libs/flatpickr/flatpickr.css') }}" />
-    <link rel="stylesheet"
-        href="{{ asset('/admin/assets/vendor/libs/bootstrap-datepicker/bootstrap-datepicker.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/admin/assets/vendor/libs/bootstrap-datepicker/bootstrap-datepicker.css') }}" />
     <link rel="stylesheet"
         href="{{ asset('/admin/assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.css') }}" />
     <link rel="stylesheet" href="{{ asset('/admin/assets/vendor/libs/jquery-timepicker/jquery-timepicker.css') }}" />
@@ -48,14 +47,14 @@
 
                             <div class="col-md-4">
                                 <label class="form-label" for="height">Height</label>
-                                <input type="text" value="{{ old('height', $user->height) }}" id="height" name="height"
-                                    class="form-control" placeholder="Height" />
+                                <input type="text" value="{{ old('height', $user->height) }}" id="height"
+                                    name="height" class="form-control" placeholder="Height" />
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label" for="weight">Weight</label>
-                                <input type="text" value="{{ old('weight', $user->weight) }}" name="weight" id="weight"
-                                    class="form-control" placeholder="Weight" />
+                                <input type="text" value="{{ old('weight', $user->weight) }}" name="weight"
+                                    id="weight" class="form-control" placeholder="Weight" />
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="school_level">School Level</label>
@@ -64,11 +63,13 @@
                                     <option value="">Select</option>
                                     <option value="1" {{ $user->school_level == 1 ? 'selected' : '' }}>High School
                                     </option>
-                                    <option value="2" {{ $user->school_level == 2 ? 'selected' : '' }}>4 Year College
+                                    <option value="2" {{ $user->school_level == 2 ? 'selected' : '' }}>4 Year
+                                        College
                                     </option>
                                     <option value="3" {{ $user->school_level == 3 ? 'selected' : '' }}>2 Year/JUCO
                                     </option>
-                                    <option value="4" {{ $user->school_level == 4 ? 'selected' : '' }}>Free Agent/Post
+                                    <option value="4" {{ $user->school_level == 4 ? 'selected' : '' }}>Free
+                                        Agent/Post
                                         School </option>
 
                                 </select>
@@ -82,8 +83,8 @@
 
                             <div class="col-md-4">
                                 <label class="form-label" for="state">State</label>
-                                <input type="text" value="{{ old('state', $user->state) }}" name="state" id="state"
-                                    class="form-control" placeholder="state" />
+                                <input type="text" value="{{ old('state', $user->state) }}" name="state"
+                                    id="state" class="form-control" placeholder="state" />
                             </div>
 
                             <div class="col-md-4">
@@ -117,7 +118,8 @@
                                                     aria-controls="collapsePitchingStats"> Pitching Stats </button>
                                             </h2>
                                             <div id="collapsePitchingStats" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingPitchingStats" data-bs-parent="#collapsibleSection">
+                                                aria-labelledby="headingPitchingStats"
+                                                data-bs-parent="#collapsibleSection">
                                                 <div class="accordion-body">
                                                     <div class="row g-3">
                                                         <input type="hidden" name="statics_id"
@@ -147,8 +149,9 @@
                                                         <div class="col-md-3">
                                                             <label class="form-label" for="top_ch_velocity">Top CH
                                                                 Velocity</label>
-                                                            <input type="text" name="top_ch_velocity" id="top_ch_velocity"
-                                                                class="form-control" placeholder="Top ch velocity"
+                                                            <input type="text" name="top_ch_velocity"
+                                                                id="top_ch_velocity" class="form-control"
+                                                                placeholder="Top ch velocity"
                                                                 value="{{ old('top_ch_velocity', $user->statics->top_ch_velocity) }}" />
                                                         </div>
                                                         <div class="col-md-3">
@@ -162,8 +165,9 @@
                                                         <div class="col-md-3">
                                                             <label class="form-label" for="top_cb_velocity">Top CB
                                                                 Velocity</label>
-                                                            <input type="text" name="top_cb_velocity" id="top_cb_velocity"
-                                                                class="form-control" placeholder="Top cb velocity"
+                                                            <input type="text" name="top_cb_velocity"
+                                                                id="top_cb_velocity" class="form-control"
+                                                                placeholder="Top cb velocity"
                                                                 value="{{ old('top_cb_velocity', $user->statics->top_cb_velocity) }}" />
                                                         </div>
                                                         <div class="col-md-3">
@@ -237,7 +241,8 @@
                                                     Status </button>
                                             </h2>
                                             <div id="collapseHittingStatus" class="accordion-collapse collapse"
-                                                aria-labelledby="headingHittingStatus" data-bs-parent="#collapsibleSection">
+                                                aria-labelledby="headingHittingStatus"
+                                                data-bs-parent="#collapsibleSection">
                                                 <div class="accordion-body">
                                                     <div class="row">
                                                         <div class="col-md-4">
@@ -257,12 +262,12 @@
                                                                 placeholder="Max Distance (FT)" />
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <label class="form-label" for="avarage_distance"> Avarage
+                                                            <label class="form-label" for="avarage_distance"> Average
                                                                 Distance (FT)</label>
                                                             <input type="text" name="avarage_distance"
                                                                 value="{{ old('avarage_distance', $user->statics->avarage_distance) }}"
                                                                 id="avarage_distance" class="form-control"
-                                                                placeholder="Avarage Distance (FT)" />
+                                                                placeholder="Average Distance (FT)" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -317,7 +322,8 @@
                                                     Status</button>
                                             </h2>
                                             <div id="collapseOthersStatus" class="accordion-collapse collapse"
-                                                aria-labelledby="headingOthersStatus" data-bs-parent="#collapsibleSection">
+                                                aria-labelledby="headingOthersStatus"
+                                                data-bs-parent="#collapsibleSection">
                                                 <div class="accordion-body">
                                                     <div class="row">
                                                         <div class="col-md-4">
@@ -330,7 +336,8 @@
                                                         <div class="col-md-4">
                                                             <label class="form-label" for="40yd_sprint_time"> 40yd
                                                                 sprint time</label>
-                                                            <input type="text" name="40yd_sprint_time" id="40yd_sprint_time"
+                                                            <input type="text" name="40yd_sprint_time"
+                                                                id="40yd_sprint_time"
                                                                 value="{{ old('40yd_sprint_time', $user->statics['40yd_sprint_time']) }}"
                                                                 class="form-control" placeholder="40yd sprint time" />
                                                         </div>
@@ -361,7 +368,8 @@
                                                         <div class="col-md-7">
                                                             <label class="form-label" for="velocity_video"> Velocity
                                                                 /Pitch video link </label>
-                                                            <input type="text" name="velocity_video" id="velocity_video"
+                                                            <input type="text" name="velocity_video"
+                                                                id="velocity_video"
                                                                 value="{{ old('velocity_video', $user->statics->velocity_video) }}"
                                                                 class="form-control"
                                                                 placeholder="Velocity /Pitch video link" />
@@ -372,13 +380,15 @@
                                                             <input type="text" id="flatpickr-datetime"
                                                                 name="valo_video_date"
                                                                 value="{{ old('valo_video_date', $user->statics->valo_video_date) }}"
-                                                                class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                                class="form-control dob-picker"
+                                                                placeholder="YYYY-MM-DD" />
                                                         </div>
                                                         <div class="col-md-7">
                                                             <label class="form-label" for="velocity_video2"> Velocity
                                                                 /Pitch video link 2
                                                             </label>
-                                                            <input type="text" name="velocity_video2" id="velocity_video2"
+                                                            <input type="text" name="velocity_video2"
+                                                                id="velocity_video2"
                                                                 value="{{ old('velocity_video2', $user->statics->velocity_video2) }}"
                                                                 class="form-control"
                                                                 placeholder="Velocity /Pitch video link 2" />
@@ -386,9 +396,11 @@
                                                         <div class="col-md-5">
                                                             <label class="form-label" for="valo_video_date2">Video date
                                                             </label>
-                                                            <input type="text" id="valo_video_date2" name="valo_video_date2"
+                                                            <input type="text" id="valo_video_date2"
+                                                                name="valo_video_date2"
                                                                 value="{{ old('valo_video_date2', $user->statics->valo_video_date2) }}"
-                                                                class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                                class="form-control dob-picker"
+                                                                placeholder="YYYY-MM-DD" />
                                                         </div>
 
                                                         <div class="col-md-7">
@@ -410,7 +422,8 @@
                                                         <div class="col-md-7">
                                                             <label class="form-label" for="jump_video_link"> Jump video
                                                                 link: </label>
-                                                            <input type="text" name="jump_video_link" id="jump_video_link"
+                                                            <input type="text" name="jump_video_link"
+                                                                id="jump_video_link"
                                                                 value="{{ old('jump_video_link', $user->statics->jump_video_link) }}"
                                                                 class="  form-control" placeholder="Jump video link:" />
                                                         </div>
@@ -438,14 +451,15 @@
                                                             <input type="text" name="hitting_video_date"
                                                                 id="hitting_video_date"
                                                                 value="{{ old('hitting_video_date', $user->statics->hitting_video_date) }}"
-                                                                class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                                class="form-control dob-picker"
+                                                                placeholder="YYYY-MM-DD" />
                                                         </div>
 
                                                         <div class="col-md-7">
                                                             <label class="form-label" for="resistance_video">
                                                                 Resistance video link </label>
-                                                            <input type="text" name="resistance_video" id="resistance_video"
-                                                                class="form-control"
+                                                            <input type="text" name="resistance_video"
+                                                                id="resistance_video" class="form-control"
                                                                 value="{{ old('resistance_video', $user->statics->resistance_video) }}"
                                                                 placeholder="Resistance video link " />
                                                         </div>
@@ -455,7 +469,8 @@
                                                             <input type="text" name="resistance_video_date"
                                                                 id="resistance_video_date"
                                                                 value="{{ old('resistance_video_date', $user->statics->resistance_video_date) }}"
-                                                                class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                                class="form-control dob-picker"
+                                                                placeholder="YYYY-MM-DD" />
                                                         </div>
                                                     </div>
                                                 </div>

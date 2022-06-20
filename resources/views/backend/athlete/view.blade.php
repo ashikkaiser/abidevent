@@ -225,7 +225,8 @@
                                                                                         for="fb_range">FB
                                                                                         Range</label>
                                                                                     <input type="text" name="fb_range"
-                                                                                        id="fb_range" class="form-control"
+                                                                                        id="fb_range"
+                                                                                        class="form-control"
                                                                                         placeholder="FB Range"
                                                                                         value="{{ $item->fb_range }}">
                                                                                 </div>
@@ -234,7 +235,8 @@
                                                                                         for="top_spin">Top
                                                                                         Spin</label>
                                                                                     <input type="text" name="top_spin"
-                                                                                        id="top_spin" class="form-control"
+                                                                                        id="top_spin"
+                                                                                        class="form-control"
                                                                                         placeholder="Top Spin"
                                                                                         value="{{ $item->top_spin }}">
                                                                                 </div>
@@ -253,7 +255,8 @@
                                                                                     <label class="form-label"
                                                                                         for="top_ch_spin">Top Spin for CH
                                                                                         Velocity</label>
-                                                                                    <input type="text" name="top_ch_spin"
+                                                                                    <input type="text"
+                                                                                        name="top_ch_spin"
                                                                                         value="{{ $item->top_ch_spin }}"
                                                                                         id="top_ch_spin"
                                                                                         class="form-control"
@@ -274,7 +277,8 @@
                                                                                     <label class="form-label"
                                                                                         for="top_cb_spin">Top Spin
                                                                                         for CB Velocity</label>
-                                                                                    <input type="text" name="top_cb_spin"
+                                                                                    <input type="text"
+                                                                                        name="top_cb_spin"
                                                                                         id="top_cb_spin"
                                                                                         class="form-control"
                                                                                         value="{{ $item->top_cb_spin }}"
@@ -295,7 +299,8 @@
                                                                                     <label class="form-label"
                                                                                         for="top_sl_spin">Top Spin for SL
                                                                                         Velocity</label>
-                                                                                    <input type="text" name="top_sl_spin"
+                                                                                    <input type="text"
+                                                                                        name="top_sl_spin"
                                                                                         id="top_sl_spin"
                                                                                         class="form-control"
                                                                                         value="{{ $item->top_sl_spin }}"
@@ -317,7 +322,8 @@
                                                                                     <label class="form-label"
                                                                                         for="top_ct_velocity">Top spin for
                                                                                         CT Velocity</label>
-                                                                                    <input type="text" name="top_ct_spin"
+                                                                                    <input type="text"
+                                                                                        name="top_ct_spin"
                                                                                         id="top_ct_spin"
                                                                                         value="{{ $item->top_ct_spin }}"
                                                                                         class="form-control"
@@ -340,7 +346,8 @@
                                                                                     <label class="form-label"
                                                                                         for="top_kn_spin">Top spin For KN
                                                                                         Velocity</label>
-                                                                                    <input type="text" name="top_kn_spin"
+                                                                                    <input type="text"
+                                                                                        name="top_kn_spin"
                                                                                         value="{{ $item->top_kn_spin }}"
                                                                                         id="top_kn_spin"
                                                                                         class="form-control"
@@ -384,7 +391,8 @@
                                                                                     <label class="form-label"
                                                                                         for="max_distance"> Max
                                                                                         Distance (FT)</label>
-                                                                                    <input type="text" name="max_distance"
+                                                                                    <input type="text"
+                                                                                        name="max_distance"
                                                                                         value="{{ $item->max_distance }}"
                                                                                         id="max_distance"
                                                                                         class="form-control"
@@ -392,14 +400,14 @@
                                                                                 </div>
                                                                                 <div class="col-md-4">
                                                                                     <label class="form-label"
-                                                                                        for="avarage_distance"> Avarage
+                                                                                        for="avarage_distance"> Average
                                                                                         Distance (FT)</label>
                                                                                     <input type="text"
                                                                                         name="avarage_distance"
                                                                                         value="{{ $item->avarage_distance }}"
                                                                                         id="avarage_distance"
                                                                                         class="form-control"
-                                                                                        placeholder="Avarage Distance (FT)">
+                                                                                        placeholder="Average Distance (FT)">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -413,7 +421,8 @@
                                                                             type="button" data-bs-toggle="collapse"
                                                                             data-bs-target="#collapsePositionStatus{{ $item->id }}"
                                                                             aria-expanded="false"
-                                                                            aria-controls="collapsePositionStatus"> Position
+                                                                            aria-controls="collapsePositionStatus">
+                                                                            Position
                                                                             Status</button>
                                                                     </h2>
                                                                     <div id="collapsePositionStatus{{ $item->id }}"
@@ -426,7 +435,8 @@
                                                                                     <label class="form-label"
                                                                                         for="Inf_velocity"> Inf
                                                                                         Velocity</label>
-                                                                                    <input type="text" name="inf_velocity"
+                                                                                    <input type="text"
+                                                                                        name="inf_velocity"
                                                                                         value="{{ $item->inf_velocity }}"
                                                                                         id="inf_velocity"
                                                                                         class="form-control"
@@ -436,7 +446,8 @@
                                                                                     <label class="form-label"
                                                                                         for="of_velocity"> Of
                                                                                         Velocity</label>
-                                                                                    <input type="text" name="of_velocity"
+                                                                                    <input type="text"
+                                                                                        name="of_velocity"
                                                                                         value="{{ $item->of_velocity }}"
                                                                                         id="of_velocity"
                                                                                         class="form-control"
@@ -477,7 +488,8 @@
                                                                                     <label class="form-label"
                                                                                         for="vertical_jump">
                                                                                         Vertical jump</label>
-                                                                                    <input type="text" name="vertical_jump"
+                                                                                    <input type="text"
+                                                                                        name="vertical_jump"
                                                                                         id="vertical_jump"
                                                                                         value="{{ $item->vertical_jump }}"
                                                                                         class="form-control"
@@ -532,7 +544,8 @@
                                                                                     <label class="form-label"
                                                                                         for="velocity_video">
                                                                                         Velocity/Pitch video link </label>
-                                                                                    <input type="text" name="velocity_video"
+                                                                                    <input type="text"
+                                                                                        name="velocity_video"
                                                                                         id="velocity_video"
                                                                                         value="{{ $item->velocity_video }}"
                                                                                         class="form-control"
@@ -565,7 +578,8 @@
                                                                                     <label class="form-label"
                                                                                         for="valo_video_date2">Video date
                                                                                     </label>
-                                                                                    <input type="text" id="valo_video_date2"
+                                                                                    <input type="text"
+                                                                                        id="valo_video_date2"
                                                                                         name="valo_video_date2"
                                                                                         value="{{ $item->valo_video_date2 }}"
                                                                                         class="form-control dob-picker"
@@ -576,7 +590,8 @@
                                                                                     <label class="form-label"
                                                                                         for="sprint_video"> Spint video
                                                                                         link: </label>
-                                                                                    <input type="text" name="sprint_video"
+                                                                                    <input type="text"
+                                                                                        name="sprint_video"
                                                                                         id="sprint_video"
                                                                                         value="{{ $item->sprint_video }}"
                                                                                         class="form-control"
@@ -622,7 +637,8 @@
                                                                                     <label class="form-label"
                                                                                         for="hitting_video"> Hitting
                                                                                         video link </label>
-                                                                                    <input type="text" id="hitting_video"
+                                                                                    <input type="text"
+                                                                                        id="hitting_video"
                                                                                         name="hitting_video"
                                                                                         value="{{ $item->hitting_video }}"
                                                                                         class="form-control"

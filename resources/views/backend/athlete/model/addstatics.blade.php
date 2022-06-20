@@ -31,8 +31,9 @@
                                                 <div class="col-md-4">
                                                     <label class="form-label" for="top_pitch_velocity">Top
                                                         pitch velocity</label>
-                                                    <input type="text" name="top_pitch_velocity" id="top_pitch_velocity"
-                                                        class="form-control" placeholder="Top pitch velocity"
+                                                    <input type="text" name="top_pitch_velocity"
+                                                        id="top_pitch_velocity" class="form-control"
+                                                        placeholder="Top pitch velocity"
                                                         value="{{ old('top_pitch_velocity') }}" />
                                                 </div>
                                                 <div class="col-md-4">
@@ -141,7 +142,8 @@
                                                 <div class="col-md-4">
                                                     <label class="form-label" for="top_exit_velocity"> Top
                                                         Exit velocity</label>
-                                                    <input type="text" name="top_exit_velocity" id="top_exit_velocity"
+                                                    <input type="text" name="top_exit_velocity"
+                                                        id="top_exit_velocity"
                                                         value="{{ old('top_exit_velocity') }}" class="form-control"
                                                         placeholder="Top exit velocity" />
                                                 </div>
@@ -153,11 +155,11 @@
                                                         class="form-control" placeholder="Max Distance (FT)" />
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label class="form-label" for="avarage_distance"> Avarage
+                                                    <label class="form-label" for="avarage_distance"> Average
                                                         Distance (FT)</label>
                                                     <input type="text" name="avarage_distance"
                                                         value="{{ old('avarage_distance') }}" id="avarage_distance"
-                                                        class="form-control" placeholder="Avarage Distance (FT)" />
+                                                        class="form-control" placeholder="Average Distance (FT)" />
                                                 </div>
                                             </div>
                                         </div>
@@ -221,9 +223,9 @@
                                                 <div class="col-md-4">
                                                     <label class="form-label" for="40yd_sprint_time"> 40yd
                                                         sprint time</label>
-                                                    <input type="text" name="40yd_sprint_time" id="40yd_sprint_time"
-                                                        value="{{ old('40yd_sprint_time') }}" class="form-control"
-                                                        placeholder="40yd sprint time" />
+                                                    <input type="text" name="40yd_sprint_time"
+                                                        id="40yd_sprint_time" value="{{ old('40yd_sprint_time') }}"
+                                                        class="form-control" placeholder="40yd sprint time" />
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="form-label" for="3d_resistance_score">
@@ -259,8 +261,9 @@
                                                 <div class="col-md-5">
                                                     <label class="form-label" for="valo_video_date">Video date
                                                     </label>
-                                                    <input type="text" id="flatpickr-datetime" name="valo_video_date"
-                                                        class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                    <input type="text" id="flatpickr-datetime"
+                                                        name="valo_video_date" class="form-control dob-picker"
+                                                        placeholder="YYYY-MM-DD" />
                                                 </div>
                                                 <div class="col-md-7">
                                                     <label class="form-label" for="velocity_video2"> Velocity
@@ -273,8 +276,9 @@
                                                 <div class="col-md-5">
                                                     <label class="form-label" for="valo_video_date2">Video date
                                                     </label>
-                                                    <input type="text" id="valo_video_date2" name="valo_video_date2"
-                                                        class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                    <input type="text" id="valo_video_date2"
+                                                        name="valo_video_date2" class="form-control dob-picker"
+                                                        placeholder="YYYY-MM-DD" />
                                                 </div>
 
                                                 <div class="col-md-7">
@@ -287,8 +291,9 @@
                                                 <div class="col-md-5">
                                                     <label class="form-label" for="multicol-last-name">It's
                                                         date </label>
-                                                    <input type="text" name="sprint_video_date" id="sprint_video_date"
-                                                        class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                                    <input type="text" name="sprint_video_date"
+                                                        id="sprint_video_date" class="form-control dob-picker"
+                                                        placeholder="YYYY-MM-DD" />
                                                 </div>
 
                                                 <div class="col-md-7">
@@ -318,7 +323,8 @@
                                                 <div class="col-md-5">
                                                     <label class="form-label" for="hitting_video_date">It's
                                                         date </label>
-                                                    <input type="text" name="hitting_video_date" id="hitting_video_date"
+                                                    <input type="text" name="hitting_video_date"
+                                                        id="hitting_video_date"
                                                         value="{{ old('hitting_video_date') }}"
                                                         class="form-control dob-picker" placeholder="YYYY-MM-DD" />
                                                 </div>
@@ -326,8 +332,9 @@
                                                 <div class="col-md-7">
                                                     <label class="form-label" for="resistance_video">
                                                         Resistance video link </label>
-                                                    <input type="text" name="resistance_video" id="resistance_video"
-                                                        class="form-control" value="{{ old('resistance_video') }}"
+                                                    <input type="text" name="resistance_video"
+                                                        id="resistance_video" class="form-control"
+                                                        value="{{ old('resistance_video') }}"
                                                         placeholder="Resistance video link " />
                                                 </div>
                                                 <div class="col-md-5">

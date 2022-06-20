@@ -165,7 +165,7 @@
                                         <td>{{ $player->statics->max_distance }}</td>
                                     </tr>
                                     <tr>
-                                        <th>AVARAGE DISTANCE (FT):</th>
+                                        <th>AVERAGE DISTANCE (FT):</th>
                                         <td>{{ $player->statics->avarage_distance }}</td>
                                     </tr>
                                     <tr>
@@ -433,7 +433,7 @@
                                                                 <td>{{ $item->max_distance }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>AVARAGE DISTANCE (FT):</th>
+                                                                <th>AVERAGE DISTANCE (FT):</th>
                                                                 <td>{{ $item->avarage_distance }}</td>
                                                             </tr>
                                                             <tr>
@@ -630,7 +630,8 @@
                     </button>
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="939" id="ytplayer" height="528" src="" title="YouTube video player" frameborder="0"
+                        <iframe width="939" id="ytplayer" height="528" src=""
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                         {{-- <iframe class="embed-responsive-item" src="{{ $pageInfo->video_link }}" id="video"
