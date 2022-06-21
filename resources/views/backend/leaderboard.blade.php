@@ -92,7 +92,7 @@
                 <div class="col-lg-12 col-md-12 mb-4">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-0">Top Exit Valocity</h5>
+                            <h5 class="card-title mb-0">Top Exit Velocity</h5>
 
                         </div>
                         <div class="card-body pb-2">
@@ -104,7 +104,7 @@
                                             <th>POSITION</th>
                                             <th>PLAYER NAME</th>
                                             <th>SCHOOL NAME</th>
-                                            <th>EXIT VALOCITY</th>
+                                            <th>EXIT VELOCITY</th>
                                             <th>STATE</th>
 
                                         </tr>
