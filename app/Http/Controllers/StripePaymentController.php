@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendEmailJob;
 use App\Models\Events;
 use App\Models\EventUser;
 use Illuminate\Http\Request;
@@ -43,8 +44,21 @@ class StripePaymentController extends Controller
         $event->paid_for = json_decode($ev->price_type)[$data->key];
         $event->stripe_id = json_decode($payment)->id;
         $event->receipt_url = json_decode($payment)->receipt_url;
-        $event->receipt_url = json_decode($payment)->receipt_url;
         $event->save();
+
+        $maildata = [
+            'title' => 'You Just Received A new Payment',
+            'name' =>  $event->name,
+            'email' => $event->email,
+            'amount' => $event->paid_amount,
+            'url' => $event->receipt_url,
+            'event' => $ev->name,
+            'paid_for' => json_decode($ev->price_type)[$data->key],
+        ];
+
+
+        dispatch(new SendEmailJob($maildata));
+
         return response()->json([
             'success' => true,
             'message' => 'Events Booking Successfully',
