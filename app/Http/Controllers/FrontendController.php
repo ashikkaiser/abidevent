@@ -9,6 +9,7 @@ use App\Models\Pages;
 use App\Models\RecommendedPlayer;
 use App\Models\Sliders;
 use App\Models\Statics;
+use App\Models\Subscriber;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -32,7 +33,7 @@ class FrontendController extends Controller
         return view('frontend.events.index', compact('events', 'pageInfo'));
     }
 
-    public function viewEvent($id)
+    public function viewEvent($name, $id)
     {
         $event = Events::find($id);
         return view('frontend.events.view', compact('event'));
@@ -49,7 +50,7 @@ class FrontendController extends Controller
         $pageInfo = Pages::where('page_slug', 'player')->first();
         return view('frontend.players.index', compact('players', 'pageInfo'));
     }
-    public function playerProfile($id)
+    public function playerProfile($name, $id)
     {
         $player = Students::find($id);
         return view('frontend.players.profile', compact('player'));
@@ -57,22 +58,13 @@ class FrontendController extends Controller
     public function leaderboard($id)
     {
 
+        $slug = schoolLevel()->firstWhere('slug', $id);
+
         $pageInfo = Pages::where('page_slug', 'leader')->first();
         $leaderboards = Students::query();
-        $leaderboards->where('school_level', $id);
+        $leaderboards->where('school_level', $slug->id);
 
-        // $top_exit_velocity = Students::with('statics')->get()->sortBy('statics.top_cb_velocity');
-        // $top_exit_velocity = Students::with('statics')->get()->map(function ($row) {
-        //     $data = new Collection();
-        //     $xdata
-        //     $collection = collect([
-        //         ['id' => $row->id, 'age' => (int)($row->statics->top_exit_velocity)],
-
-        //     ]);
-        //     $data->push($row->id, (int)($row->statics->top_exit_velocity));
-        //     return $data;
-        // });
-        $top_exit_velocityx = Students::where('school_level', $id)->with('statics')->get()->map(function ($row) {
+        $top_exit_velocityx = Students::where('school_level', $slug->id)->with('statics')->get()->map(function ($row) {
             $xdata = array();
             array_push($xdata, ['id' => $row->id, 'top_exit_velocity' => (int)($row->statics->top_exit_velocity), 'data' => $row, 'statics' => $row->statics]);
             $collection = collect($xdata);
@@ -88,14 +80,23 @@ class FrontendController extends Controller
         $blogs = News::latest()->paginate(20);
         return view('frontend.blogs.index', compact('pageInfo', 'blogs'));
     }
-    public function viewBlogs($id)
+    public function viewBlogs($name, $id)
     {
         $blog = News::find($id);
         $recentNews = News::orderBy('created_at', "desc")->limit(6)->get();
         return view('frontend.blogs.view', compact('blog', 'recentNews'));
     }
-    public function subscribe()
+    public function subscribe(Request $request)
     {
+        if ($request->method() == 'POST') {
+            $request->validate([
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:subscribers'],
+            ]);
+            $rplayer =  new Subscriber();
+            $rplayer->email = $request->email;
+            $rplayer->save();
+            return "Thank You For Subscribing";
+        }
         $pageInfo = Pages::where('page_slug', 'subscribe')->first();
         return view('frontend.subscribe', compact('pageInfo'));
     }

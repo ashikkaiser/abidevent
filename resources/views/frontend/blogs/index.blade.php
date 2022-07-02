@@ -18,7 +18,7 @@
                     <div class="row events-list">
                         @foreach ($blogs as $item)
                             <div class="col-md-6">
-                                <a href="{{ route('home.viewBlog', $item->id) }}">
+                                <a href="{{ route('home.viewBlog', [sanitize($item->title), $item->id]) }}">
                                     <div class="event position-relative  bg-primary">
                                         {{-- <span class="tilted-tag bg-light-2 event-tag position-absolute text-white">
                                         <span class="text-secondary">WI</span>
@@ -56,8 +56,7 @@
                                 <span class="tilted-tag text-nowrap bg-secondary text-white mr-3">
                                     <span>{{ $item->created_at->format('m-d-Y') }}</span>
                                 </span>
-                                <a href="{{ route('home.viewBlog', $item->id) }}">
-                                    <h4>{{ $item->title }}</h4>
+                                <a href="{{ route('home.viewBlog', [sanitize($item->title), $item->id]) }}">
                                 </a>
                             </div>
                         @endforeach

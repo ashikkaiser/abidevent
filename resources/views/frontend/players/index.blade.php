@@ -30,7 +30,7 @@
                                 <td scope="row" class="text-primary font-weight-bold">
                                     <div class="player">
                                         {{-- <img src="{{ $item->image }}" alt="player" class="player-img"> --}}
-                                        <a href="{{ route('home.playerProfile', $item->id) }}">
+                                        <a href="{{ route('home.playerProfile', [sanitize($item->name), $item->id]) }}">
                                             <p style="margin-bottom: 0px;white-space: nowrap;">{{ $item->name }}</p>
                                         </a>
                                         <p style="margin-bottom: 0px;white-space: nowrap;">Age : {{ $item->age }}</p>
@@ -58,8 +58,8 @@
                                 </td>
 
                                 <td scope="row" class="font-weight-medium text-primary">
-                                    <a href="{{ route('home.playerProfile', $item->id) }}" style="font-size: 14px;"
-                                        class="btn btn-primary btn-sm rounded">
+                                    <a href="{{ route('home.playerProfile', [sanitize($item->name), $item->id]) }}"
+                                        style="font-size: 14px;" class="btn btn-primary btn-sm rounded">
                                         <span><i class="far fa-eye"></i></span>
                                     </a>
                                 </td>
@@ -91,7 +91,7 @@
                                 <td scope="row" class="text-primary font-weight-bold">
                                     <div class="player d-flex align-items-center">
                                         <img src="{{ $item->image }}" alt="player" class="player-img">
-                                        <a href="{{ route('home.playerProfile', $item->id) }}">
+                                        <a href="{{ route('home.playerProfile', [sanitize($item->name), $item->id]) }}">
                                             <p>{{ $item->name }}</p>
                                         </a>
 
@@ -118,7 +118,7 @@
                                     {{ $item->height }}
                                 </td>
                                 <td scope="row" class="font-weight-medium text-primary">
-                                    <a href="{{ route('home.playerProfile', $item->id) }}"
+                                    <a href="{{ route('home.playerProfile', [sanitize($item->name), $item->id]) }}"
                                         class="btn btn-primary btn-sm">
                                         <span>Click To see</span>
                                     </a>

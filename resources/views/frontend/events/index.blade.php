@@ -28,7 +28,7 @@
                                 <td scope="row" class="font-weight-bold text-secondary">{{ $key + 1 }}</td>
                                 <td scope="row" class="text-primary font-weight-bold">
                                     <div class="player">
-                                        <a href="{{ route('home.viewEvent', $item->id) }}">
+                                        <a href="{{ route('home.viewEvent', [sanitize($item->name), $item->id]) }}">
                                             <p style="margin-bottom: 0px">Name : {{ $item->name }}
                                             </p>
                                             <p style="margin-bottom: 0px">State : {{ $item->state }}
@@ -70,7 +70,7 @@
                         @foreach ($events as $item)
                             <tr>
                                 <td scope="row" class="font-weight-bold text-secondary"><a
-                                        href="{{ route('home.viewEvent', $item->id) }}"
+                                        href="{{ route('home.viewEvent', [sanitize($item->name), $item->id]) }}"
                                         rel="noopener noreferrer">{{ $item->name }}</a> </td>
                                 <td scope="row" class="text-primary font-weight-bold">{{ $item->state }}</td>
                                 <td scope="row" class="text-center"><span

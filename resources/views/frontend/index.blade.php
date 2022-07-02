@@ -56,7 +56,7 @@
                             <div class="row events-list">
                                 @foreach ($news as $item)
                                     <div class="col-md-6">
-                                        <a href="{{ route('home.viewBlog', $item->id) }}">
+                                        <a href="{{ route('home.viewBlog', [sanitize($item->title), $item->id]) }}">
                                             <div class="event position-relative  bg-primary">
                                                 <span class="tilted-tag bg-light-2 event-tag position-absolute text-white">
                                                     <span class="text-secondary">Featured</span>
@@ -91,7 +91,7 @@
                                 <h2 class="text-secondary title title-2 pb-2  mb-4">upcoming events</h2>
                                 <!-- upcoming event  -->
                                 @foreach ($events as $item)
-                                    <a href="{{ route('home.viewEvent', $item->id) }}">
+                                    <a href="{{ route('home.viewEvent', [sanitize($item->name), $item->id]) }}">
                                         <div class="upcoming-event bg-white border-bottom d-flex align-items-center">
                                             <span class="tilted-tag text-nowrap bg-secondary text-white mr-3">
                                                 <span>{{ $item->date->format('dS,F Y h:i A') }}</span>

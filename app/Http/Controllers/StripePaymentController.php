@@ -62,7 +62,7 @@ class StripePaymentController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Events Booking Successfully',
-            'redirect' => route('home.viewEvent', $ev->id),
+            'redirect' => route('home.viewEvent', [sanitize($ev->name), $ev->id]),
 
         ]);
     }

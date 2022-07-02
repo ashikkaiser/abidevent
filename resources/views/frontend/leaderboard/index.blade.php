@@ -38,7 +38,7 @@
                             <tr>
                                 <td scope="row" class="font-weight-bold text-secondary">{{ $loop->iteration }}</td>
                                 <td scope="row" class="text-primary font-weight-bold"><a
-                                        href="{{ route('home.playerProfile', $item->id) }}">{{ $item->name }}
+                                        href="{{ route('home.playerProfile', [sanitize($item->name), $item->id]) }}">{{ $item->name }}
                                         ({{ $item->state }})
                                     </a>
                                 </td>
@@ -79,11 +79,12 @@
                                 <tr>
                                     <td scope="row" class="font-weight-bold text-secondary">{{ $i }}</td>
                                     <td scope="row" class="text-primary font-weight-bold"><a
-                                            href="{{ route('home.playerProfile', $item->id) }}">{{ $item->name }}
+                                            href="{{ route('home.playerProfile', [sanitize($item->name), $item->id]) }}">{{ $item->name }}
                                             ({{ $item->state }})
                                         </a>
                                     </td>
-                                    <td scope="row" class="font-weight-bold text-primary">{{ $item->school_name }}</td>
+                                    <td scope="row" class="font-weight-bold text-primary">{{ $item->school_name }}
+                                    </td>
 
                                     <td scope="row" class="text-center">
                                         <span class="tilted-tag  bg-primary text-nowrap px-lg-5 py-1 text-white ">
@@ -117,9 +118,10 @@
                         @foreach ($top_exit_velocity as $item)
                             @if ($item)
                                 <tr>
-                                    <td scope="row" class="font-weight-bold text-secondary">{{ $loop->iteration }}</td>
+                                    <td scope="row" class="font-weight-bold text-secondary">{{ $loop->iteration }}
+                                    </td>
                                     <td scope="row" class="text-primary font-weight-bold"><a
-                                            href="{{ route('home.playerProfile', $item['data']->id) }}">{{ $item['data']->name }}
+                                            href="{{ route('home.playerProfile', [sanitize($item['data']->name), $item['data']->id]) }}">{{ $item['data']->name }}
                                             ({{ $item['data']->state }})
                                         </a>
                                     </td>
@@ -160,7 +162,7 @@
                             <tr>
                                 <td scope="row" class="font-weight-bold text-secondary">{{ $loop->iteration }}</td>
                                 <td scope="row" class="text-primary font-weight-bold"><a
-                                        href="{{ route('home.playerProfile', $item->id) }}">{{ $item->name }}
+                                        href="{{ route('home.playerProfile', [sanitize($item->name), $item->id]) }}">{{ $item->name }}
                                         ({{ $item->state }})
                                     </a>
                                 </td>

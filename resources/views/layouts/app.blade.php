@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -188,8 +189,9 @@
                             <li class="mobile-table"><a href="{{ route('home.blogs') }}">News</a></li>
                             <li
                                 class="mobile-table nav-item dropdown  {{ Route::currentRouteName() == 'home.event' ? 'active' : '' }}">
-                                <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
                                     Events
                                 </a>
 
@@ -206,8 +208,9 @@
                             </li>
                             <li
                                 class="mobile-table  dropdown  {{ Route::currentRouteName() == 'home.leaderboard' ? 'active' : '' }}">
-                                <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
                                     Leader board
                                 </a>
 
@@ -218,7 +221,8 @@
                                         Year College</a>
                                     <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 3) }}">2
                                         Year/JUCO</a>
-                                    <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 4) }}">Free
+                                    <a class="dropdown-item mob-link"
+                                        href="{{ route('home.leaderboard', 4) }}">Free
                                         Agent/Post
                                         School</a>
                                 </div>
@@ -230,7 +234,8 @@
                         <div class="search-box">
                             <form action="{{ route('home.players') }}" method="get">
                                 <button class="btn-search"><i class="fas fa-search"></i></button>
-                                <input type="text" name="q" class="input-search" placeholder="Search player...">
+                                <input type="text" name="q" class="input-search"
+                                    placeholder="Search player...">
                             </form>
                         </div>
 
@@ -244,8 +249,8 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="logo">
-                            <a href="/" class="d-inline-block"><img src="/frontend/images/logo.png" alt="Logo"
-                                    class="img-fluid" style="    max-width: 103%;"></a>
+                            <a href="/" class="d-inline-block"><img src="/frontend/images/logo.png"
+                                    alt="Logo" class="img-fluid" style="    max-width: 103%;"></a>
                         </div>
                     </div>
                     <div class="col-lg-8">
@@ -299,7 +304,11 @@
                                             </a>
 
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item"
+                                                @foreach (schoolLevel() as $item)
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('home.leaderboard', $item->slug) }}">{{ $item->name }}</a>
+                                                @endforeach
+                                                {{-- <a class="dropdown-item"
                                                     href="{{ route('home.leaderboard', 1) }}">High School</a>
                                                 <a class="dropdown-item" href="{{ route('home.leaderboard', 2) }}">4
                                                     Year College</a>
@@ -307,7 +316,7 @@
                                                     Year/JUCO</a>
                                                 <a class="dropdown-item"
                                                     href="{{ route('home.leaderboard', 4) }}">Free Agent/Post
-                                                    School</a>
+                                                    School</a> --}}
                                             </div>
                                         </li>
 

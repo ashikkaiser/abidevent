@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\NewsController;
 use App\Http\Controllers\Backend\PagesController;
 use App\Http\Controllers\Backend\RplayerController;
 use App\Http\Controllers\Backend\SliderController;
+use App\Http\Controllers\Backend\SubscriberController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\FrontendController;
 
@@ -29,14 +30,14 @@ use App\Http\Controllers\FrontendController;
 
 Auth::routes();
 Route::get('/', [FrontendController::class, 'index'])->name('home.index');
-Route::get('/ev/{type}', [FrontendController::class, 'events'])->name('home.event');
-Route::get('/ev/view/{id}', [FrontendController::class, 'viewEvent'])->name('home.viewEvent');
+Route::get('/event/{type}', [FrontendController::class, 'events'])->name('home.event');
+Route::get('/event/view/{name}{id}', [FrontendController::class, 'viewEvent'])->name('home.viewEvent');
 Route::get('/players', [FrontendController::class, 'players'])->name('home.players');
-Route::get('/player/profile/{id}', [FrontendController::class, 'playerProfile'])->name('home.playerProfile');
-Route::get('/ld/{id}', [FrontendController::class, 'leaderboard'])->name('home.leaderboard');
+Route::get('/profile/{name}{id}', [FrontendController::class, 'playerProfile'])->name('home.playerProfile');
+Route::get('/players/leaderboard/{id}', [FrontendController::class, 'leaderboard'])->name('home.leaderboard');
 Route::get('/blogs', [FrontendController::class, 'blogs'])->name('home.blogs');
-Route::get('/blogs/{is}', [FrontendController::class, 'viewBlogs'])->name('home.viewBlog');
-Route::get('/subscribe', [FrontendController::class, 'subscribe'])->name('home.subscribe');
+Route::get('/blogs/{name}{is}', [FrontendController::class, 'viewBlogs'])->name('home.viewBlog');
+Route::any('/subscribe', [FrontendController::class, 'subscribe'])->name('home.subscribe');
 Route::get('/about-us', [FrontendController::class, 'aboutUs'])->name('home.aboutUs');
 Route::any('/recommend-a-player', [FrontendController::class, 'recommendPlayer'])->name('home.recommendPlayer');
 Route::get('/privacy-policy', [FrontendController::class, 'privacyPolicy'])->name('home.privacyPolicy');
@@ -60,6 +61,7 @@ Route::group(['middleware' => ['auth:web'], 'prefix' => 'admin'], function () {
     Route::resource('slider', SliderController::class);
     Route::resource('users', UserController::class);
     Route::resource('recommended-player', RplayerController::class);
+    Route::resource('subscriber', SubscriberController::class);
     Route::get('leaderboard/{type}', [LeaderboardController::class, 'index'])->name('leaderboard.index');
     Route::any('siteSettings', [PagesController::class, 'siteSettings'])->name('siteSettings');
 });

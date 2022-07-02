@@ -32,7 +32,7 @@
                                 <span class="tilted-tag text-nowrap bg-secondary text-white mr-3">
                                     <span>{{ $item->created_at->format('d-m-Y') }}</span>
                                 </span>
-                                <a href="{{ route('home.viewBlog', $item->id) }}">
+                                <a href="{{ route('home.viewBlog', [sanitize($item->title), $item->id]) }}">
                                     <h4>{{ $item->title }}</h4>
                                 </a>
                             </div>

@@ -41,9 +41,9 @@
                         </div>
 
                         <div class="post-action py-4 border-top d-flex align-items-center justify-content-between">
-                            <a href="{{ $blog->previous() ? route('home.viewBlog', $blog->previous()->id) : '#' }}"
+                            <a href="{{ $blog->previous() ? route('home.viewBlog', [sanitize($blog->previous()->title), $blog->previous()->id]) : '#' }}"
                                 class=" btn btn-outline-primary py-2">Previous </a>
-                            <a href="{{ $blog->next() ? route('home.viewBlog', $blog->next()->id) : '#' }}"
+                            <a href="{{ $blog->next() ? route('home.viewBlog', [sanitize($blog->next()->title), $blog->next()->id]) : '#' }}"
                                 class="btn btn-outline-primary py-2">Next</a>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                                 <span class="tilted-tag text-nowrap bg-secondary text-white mr-3">
                                     <span> {{ $item->created_at->format('m-d-Y') }} </span>
                                 </span>
-                                <a href="{{ route('home.viewBlog', $item->id) }}">
+                                <a href="{{ route('home.viewBlog', [sanitize($item->title), $item->id]) }}">
                                     <h4>{{ $item->title }}</h4>
                                 </a>
                             </div>

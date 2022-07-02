@@ -37,32 +37,7 @@
     <script src="{{ asset('admin/assets/vendor/js/helpers.js') }}"></script>
     <script src="{{ asset('/admin/assets/vendor/js/template-customizer.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/config.js') }}"></script>
-    {{-- <script>
-        window.templateCustomizer = new TemplateCustomizer({
-            cssPath: '',
-            themesPath: '',
-            defaultShowDropdownOnHover: {{ $configData['showDropdownOnHover'] }}, // true/false (for horizontal layout only)
-            displayCustomizer: {{ $configData['displayCustomizer'] }},
-            lang: '{{ app()->getLocale() }}',
-            pathResolver: function(path) {
-                var resolvedPaths = {
-                    // Core stylesheets
-                    @foreach (['core'] as $name)
-                        '{{ $name }}.css': '{{ asset(mix("assets/vendor/css{$configData['rtlSupport']}/{$name}.css")) }}',
-                        '{{ $name }}-dark.css': '{{ asset(mix("assets/vendor/css{$configData['rtlSupport']}/{$name}-dark.css")) }}',
-                    @endforeach
 
-                    // Themes
-                    @foreach (['default', 'bordered', 'semi-dark'] as $name)
-                        'theme-{{ $name }}.css': '{{ asset(mix("assets/vendor/css{$configData['rtlSupport']}/theme-{$name}.css")) }}',
-                        'theme-{{ $name }}-dark.css': '{{ asset(mix("assets/vendor/css{$configData['rtlSupport']}/theme-{$name}-dark.css")) }}',
-                    @endforeach
-                }
-                return resolvedPaths[path] || path;
-            },
-            'controls': <?php echo json_encode($configData['customizerControls']); ?>,
-        });
-    </script> --}}
     @yield('css')
 </head>
 
@@ -168,6 +143,14 @@
                         </a>
 
                     </li>
+                    <li
+                        class="menu-item {{ request()->is('subscriber/*') || request()->is('student') ? 'open' : '' }}">
+                        <a href="{{ route('subscriber.index') }}" class="menu-link">
+                            <i class='menu-icon bx bx-user-check'></i>
+                            <div data-i18n="PLAYERS" class="text-uppercase">Subscribers </div>
+                        </a>
+
+                    </li>
                     {{-- @php
                         dd(
                             Route::getFacadeRoot()
@@ -192,7 +175,8 @@
                             <li
                                 class="menu-item {{ request()->fullUrl() == url()->current() . '?type=showcase' ? '' : '' }}">
                                 <a href="
-                                {{ route('event.create') }}?type=showcase" class="menu-link">
+                                {{ route('event.create') }}?type=showcase"
+                                    class="menu-link">
                                     <div data-i18n="Add Event">Add Showcase Event </div>
                                 </a>
                             </li>
@@ -273,7 +257,8 @@
                     </li>
                     <li class="menu-item">
 
-                        <a class="menu-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <a class="menu-link" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             <i class="menu-icon tf-icons bx bx-exit"></i> {{ __('Logout') }}
                         </a>
