@@ -215,16 +215,11 @@
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 1) }}">High
-                                        School</a>
-                                    <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 2) }}">4
-                                        Year College</a>
-                                    <a class="dropdown-item mob-link" href="{{ route('home.leaderboard', 3) }}">2
-                                        Year/JUCO</a>
-                                    <a class="dropdown-item mob-link"
-                                        href="{{ route('home.leaderboard', 4) }}">Free
-                                        Agent/Post
-                                        School</a>
+                                              @foreach (schoolLevel() as $item)
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('home.leaderboard', $item->slug) }}">{{ $item->name }}</a>
+                                                @endforeach
+                                   
                                 </div>
                             </li>
                             <li class="web-table"><a href="{{ route('home.blogs') }}">News</a></li>
